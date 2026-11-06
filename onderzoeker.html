@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Onderzoeker</title>
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAAFPUlEQVR4Xu3dwZHbRhBGYcjluzchx+BMrJsVg44KxTEooQ3B5WIVxCIJonumZ/rvwfuuXgKznIcGJC3XX/745+8NeOU33hYcIQ4QB/yYHGBywI/JASYH/JgcYHLAj8kBJgf8mBxgcsCPyQEmB/yYHGBywI/JASYH/JgcYHLAj8kBJgf8mBxgcsCPyQEmB/yYHGBywI/JASYH/H73v0Ta5/cflvV9fPtq+bKL+7LAL28xBnGEUI4UjqOziWdU8qBkHOFZ3CORXbE4hmZBIlUnx7QsSGRX4+85UsrYtrTzilC/rWRl8eCaDyLSk0OkjMuOEN04dMq4UVvPBKJxaO6E5qrGUYxDeQ+U1xZO7oG0/90/fXiccIo1aMXRs22nTTybfLpyhOJo26qGJqIqCTm1MpU4GsoI3xuFNUhRfCC1CC9j24YcszSJOLyX7IgybrxH9q68lvzbiuv99W5eM81VTSYxOYymldEwQpaUHIf9Ap1ZhvcWY/8uakmOA8oynznsF1zD2Pj86+fz+/7x75/ezRi6SHEFPprgKuNlE7v9v9or+fj21d7HYtImh/Edt5fxPouX7ImEr7aERZ45Gsr4/0c0Xt16sJOOwzg2evbY+FrjShaTE4dxSlsYd/eN/iP8eqaxfRizipw4okTta9RxFqMbx+kkj93R06Odrmc9unEgXUIcITfm0wu9QcgxQ747EQlxWGjOcM1VjSMaBxSUjCNk/r807sgVlYwDcxAHDhEHiAN+TA4wOeBXcnLYf0jHa9yRKyoZB+YQjUPzXyg0VzVOQhwh/0IxYv6HHDPkuxOREAeq0I3jdIaHXOi706Odrmc9unFYnO6oUdRxFpMTR+CNuX9f+4/wa/ys9b9xyYnDyDjJe3bX+FrjShYjHYedcY8ftL3qOtI+Dmn/ncCuWW38aR1XFsax4VpnCQU+SP35/Yf9fd93ff6n7NeTOTnswyPrV+0YZ0bW8kZb5JkDIyTHYb9f2C/iKPYz2r+LWpLjcLHvVr+Z55KV/Mxx492JoVeq1GJySUwO72Z798/Oe2TvymuRiKOBdxctRhyzNInbStvN5Sbk2m3LIuTUyoTiaHj4uNewVW1N3Efp+gu6crTi6OzDOEt6mngow3jGouTiCOljqNuIeiisYW7pU3wgVX6jX5ahH3QbxTiiHjPDHZVx03+3UiMah2Af78tYsg/dOKT6sJSxXh+KD6TPEif2/gDkWoPyY5Od9OTYZb3XbWUs8/xRY3LsXJdvj/scm0+a1XSUYnFMuK8/7GhzGTel+ygZx6BEnjeys4zqfRSOI+pe8/7ivnIfK8Rxz7iX74N4YDzme64zilgtjkGu2UeNP8qmC7nuQwqbiTisLtgHcThcrQ/i8LlUH8Thdp0+iKPFRfogjkZX6IM42i3fB3F0WbsP4ui1cB/EEWDVPogjxpJ9EEeY9fogjkiL9UEcwVbqgzjiLdMHcQyxRh/EMcoCfRDHQNX7II6xSvdBHMPV7YM4ZijaB3FMUrEP4pinXB/EMVWtPohjtkJ9EEeCKn0QR44SfRBHmv4++o/wHnFk6tndntcaEUeytj1ue5UXceTz7rT365sRhwT7ftu/sh9xqLDsuuVrAhGHkPd7P7mMbSMOMUcFzC+DOBQ9d5BSBnGIuq8hqwzi0HVrIrGMbeP3kOIYf1rBIeIAccCPyQEmB/yYHGBywI/JASYH/JgcYHLAj8kBJgf8mBxgcsCPyQEmB/yYHGBywI/JASYH/JgcYHLAj8kBJgf8mBxgcsCPyQEmB/yYHGBywI/JgUP/AY/P1XC0A6t+AAAAAElFTkSuQmCC">
+<link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAAFPUlEQVR4Xu3dwZHbRhBGYcjluzchx+BMrJsVg44KxTEooQ3B5WIVxCIJonumZ/rvwfuuXgKznIcGJC3XX/745+8NeOU33hYcIQ4QB/yYHGBywI/JASYH/JgcYHLAj8kBJgf8mBxgcsCPyQEmB/yYHGBywI/JASYH/JgcYHLAj8kBJgf8mBxgcsCPyQEmB/yYHGBywI/JASYH/H73v0Ta5/cflvV9fPtq+bKL+7LAL28xBnGEUI4UjqOziWdU8qBkHOFZ3CORXbE4hmZBIlUnx7QsSGRX4+85UsrYtrTzilC/rWRl8eCaDyLSk0OkjMuOEN04dMq4UVvPBKJxaO6E5qrGUYxDeQ+U1xZO7oG0/90/fXiccIo1aMXRs22nTTybfLpyhOJo26qGJqIqCTm1MpU4GsoI3xuFNUhRfCC1CC9j24YcszSJOLyX7IgybrxH9q68lvzbiuv99W5eM81VTSYxOYymldEwQpaUHIf9Ap1ZhvcWY/8uakmOA8oynznsF1zD2Pj86+fz+/7x75/ezRi6SHEFPprgKuNlE7v9v9or+fj21d7HYtImh/Edt5fxPouX7ImEr7aERZ45Gsr4/0c0Xt16sJOOwzg2evbY+FrjShaTE4dxSlsYd/eN/iP8eqaxfRizipw4okTta9RxFqMbx+kkj93R06Odrmc9unEgXUIcITfm0wu9QcgxQ747EQlxWGjOcM1VjSMaBxSUjCNk/r807sgVlYwDcxAHDhEHiAN+TA4wOeBXcnLYf0jHa9yRKyoZB+YQjUPzXyg0VzVOQhwh/0IxYv6HHDPkuxOREAeq0I3jdIaHXOi706Odrmc9unFYnO6oUdRxFpMTR+CNuX9f+4/wa/ys9b9xyYnDyDjJe3bX+FrjShYjHYedcY8ftL3qOtI+Dmn/ncCuWW38aR1XFsax4VpnCQU+SP35/Yf9fd93ff6n7NeTOTnswyPrV+0YZ0bW8kZb5JkDIyTHYb9f2C/iKPYz2r+LWpLjcLHvVr+Z55KV/Mxx492JoVeq1GJySUwO72Z798/Oe2TvymuRiKOBdxctRhyzNInbStvN5Sbk2m3LIuTUyoTiaHj4uNewVW1N3Efp+gu6crTi6OzDOEt6mngow3jGouTiCOljqNuIeiisYW7pU3wgVX6jX5ahH3QbxTiiHjPDHZVx03+3UiMah2Af78tYsg/dOKT6sJSxXh+KD6TPEif2/gDkWoPyY5Od9OTYZb3XbWUs8/xRY3LsXJdvj/scm0+a1XSUYnFMuK8/7GhzGTel+ygZx6BEnjeys4zqfRSOI+pe8/7ivnIfK8Rxz7iX74N4YDzme64zilgtjkGu2UeNP8qmC7nuQwqbiTisLtgHcThcrQ/i8LlUH8Thdp0+iKPFRfogjkZX6IM42i3fB3F0WbsP4ui1cB/EEWDVPogjxpJ9EEeY9fogjkiL9UEcwVbqgzjiLdMHcQyxRh/EMcoCfRDHQNX7II6xSvdBHMPV7YM4ZijaB3FMUrEP4pinXB/EMVWtPohjtkJ9EEeCKn0QR44SfRBHmv4++o/wHnFk6tndntcaEUeytj1ue5UXceTz7rT365sRhwT7ftu/sh9xqLDsuuVrAhGHkPd7P7mMbSMOMUcFzC+DOBQ9d5BSBnGIuq8hqwzi0HVrIrGMbeP3kOIYf1rBIeIAccCPyQEmB/yYHGBywI/JASYH/JgcYHLAj8kBJgf8mBxgcsCPyQEmB/yYHGBywI/JASYH/JgcYHLAj8kBJgf8mBxgcsCPyQEmB/yYHGBywI/JgUP/AY/P1XC0A6t+AAAAAElFTkSuQmCC">
+<meta name="apple-mobile-web-app-title" content="Onderzoeker">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* Plan: onderzoeker-cursus voor 9-11 jaar. Inktblauw, paars, zon-geel, groen, zand.
+   Layout: een brede kolom, grote tikvlakken voor iPad, een pizza als voortgangskaart. */
+:root{
+  --ink:#1c2340; --paper:#f1f4ff; --card:#ffffff; --line:#d9deef; --soft:#e9edfb; --muted:#566086;
+  --tomato:#0f766e; --on-tomato:#ffffff; --sun:#ffc531; --basil:#17835a; --on-basil:#ffffff;
+  --dough:#e8c58a; --dough-soft:#f3e3c1; --blue:#2a62ff; --bad:#fdeceb; --good:#e3f6ec;
+  --display:"Fredoka","Trebuchet MS",system-ui,sans-serif; --body:"Nunito",system-ui,-apple-system,"Segoe UI",sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ink:#eef0ff; --paper:#121629; --card:#1c2240; --line:#323a63; --soft:#262d52; --muted:#aab2d8;
+    --tomato:#4fd1c5; --on-tomato:#04211e; --basil:#3cc593; --on-basil:#0b2a1f;
+    --dough-soft:#3a3550; --blue:#8aa8ff; --bad:#3b2230; --good:#17332b; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --ink:#eef0ff; --paper:#121629; --card:#1c2240; --line:#323a63; --soft:#262d52; --muted:#aab2d8;
+  --tomato:#4fd1c5; --on-tomato:#04211e; --basil:#3cc593; --on-basil:#0b2a1f;
+  --dough-soft:#3a3550; --blue:#8aa8ff; --bad:#3b2230; --good:#17332b; color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:18px;line-height:1.55;-webkit-text-size-adjust:100%}
+.wrap{max-width:880px;margin:0 auto;padding:16px 16px calc(72px + env(safe-area-inset-bottom));padding-top:calc(16px + env(safe-area-inset-top))}
+h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.15;margin:0 0 .5em;text-wrap:balance}
+h1{font-size:2.3rem} h2{font-size:1.55rem} h3{font-size:1.25rem}
+p{margin:0 0 .8em}
+a{color:var(--blue)}
+:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:18px}
+.brand{font-family:var(--display);font-weight:700;font-size:1.4rem;text-decoration:none;color:var(--ink);display:flex;align-items:center;gap:10px}
+.brand i{display:inline-block;width:28px;height:28px;border-radius:50%;background:radial-gradient(circle at 35% 35%,var(--sun) 0 22%,var(--tomato) 24% 100%);border:3px solid var(--dough)}
+.nav{display:flex;gap:8px;flex-wrap:wrap}
+.btn,button{font-family:var(--display);font-weight:600;font-size:1.05rem;min-height:52px;padding:0 20px;border-radius:14px;border:2px solid var(--ink);background:var(--card);color:var(--ink);cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;touch-action:manipulation}
+.btn.small,button.small{min-height:44px;padding:0 14px;font-size:1rem}
+.primary{background:var(--tomato);border-color:var(--tomato);color:var(--on-tomato)}
+.ghost{background:transparent}
+button:disabled{opacity:.5;cursor:default}
+.card{background:var(--card);border:2px solid var(--line);border-radius:22px;padding:20px;margin-bottom:16px}
+.tag{display:inline-block;font-family:var(--display);font-weight:600;font-size:.85rem;padding:2px 12px;border-radius:99px;margin-bottom:10px;background:var(--soft);color:var(--ink)}
+.tag.probeer{background:var(--sun);color:#1c2340}
+.tag.ontdek{background:var(--blue);color:#fff}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .tag.ontdek{color:#10163a}}
+:root[data-theme="dark"] .tag.ontdek{color:#10163a}
+.tag.samen{background:var(--basil);color:var(--on-basil)}
+.tag.denk{background:var(--dough);color:#1c2340}
+.done-badge{float:right;font-family:var(--display);font-weight:600;background:var(--basil);color:var(--on-basil);border-radius:99px;padding:2px 14px;font-size:.9rem}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:12px}
+textarea,input[type=text]{width:100%;font-family:var(--body);font-size:18px;line-height:1.5;color:var(--ink);background:var(--paper);border:2px solid var(--line);border-radius:14px;padding:12px 14px}
+textarea{resize:vertical;min-height:120px}
+.bad,.good{border-radius:14px;padding:10px 14px;margin:0 0 12px}
+.bad{background:var(--bad)} .good{background:var(--good)}
+.tip{background:var(--soft);border-left:6px solid var(--sun);border-radius:12px;padding:10px 14px;margin-top:12px}
+.status{min-height:1.5em;margin:10px 0 0;font-weight:700}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.chip{min-height:44px;padding:0 16px;font-size:1rem;border-radius:99px;border-style:dashed;border-color:var(--muted);color:var(--muted);background:transparent}
+.chip.needed{border-style:solid;border-color:var(--ink);color:var(--ink)}
+.chip.on{background:var(--basil);border-color:var(--basil);color:var(--on-basil);border-style:solid}
+.hintline{font-size:.95rem;color:var(--muted);margin:8px 0 0}
+.opt{display:block;width:100%;text-align:left;justify-content:flex-start;margin-bottom:10px;min-height:56px;padding:10px 18px;font-family:var(--body);font-weight:700;font-size:1.05rem;line-height:1.35}
+.opt.right{background:var(--basil);border-color:var(--basil);color:var(--on-basil)}
+.opt.wrong{background:var(--bad);border-color:var(--tomato)}
+.opt.sel{border-color:var(--blue);box-shadow:inset 0 0 0 3px var(--blue)}
+.fb{margin:6px 0 0;font-weight:700}
+.bar{height:12px;border-radius:99px;background:var(--soft);overflow:hidden}
+.bar>span{display:block;height:100%;background:var(--basil);border-radius:99px}
+.hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,260px);gap:20px;align-items:center}
+@media (max-width:640px){.hero{grid-template-columns:1fr}}
+.pizza{width:100%;max-width:260px;height:auto;margin:0 auto;display:block}
+.pizza a{cursor:pointer}
+.pizza text{font-family:var(--display);font-weight:700;font-size:20px;pointer-events:none}
+.lessons{display:grid;gap:12px;margin:0;padding:0;list-style:none}
+.lesson{display:grid;grid-template-columns:56px minmax(0,1fr) auto;gap:14px;align-items:center;text-decoration:none;color:var(--ink);background:var(--card);border:2px solid var(--line);border-radius:20px;padding:14px 16px}
+.lesson:hover{border-color:var(--ink)}
+.num{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;font-family:var(--display);font-weight:700;font-size:1.5rem;background:var(--dough-soft);color:#1c2340;border:3px solid var(--dough)}
+.lesson.finished .num{background:var(--tomato);border-color:var(--tomato);color:var(--on-tomato)}
+.lesson b{font-family:var(--display);font-size:1.15rem;display:block;line-height:1.2}
+.lesson small{display:block;color:var(--muted);font-size:.95rem}
+.lesson .bar{margin-top:8px}
+.go{font-family:var(--display);font-weight:600;color:var(--muted);white-space:nowrap}
+.layers{display:flex;flex-direction:column;align-items:center;gap:6px;margin:14px 0 4px}
+.layer{border-radius:18px;padding:8px 16px;color:#1c2340;min-width:min(100%,270px);text-align:center;transition:opacity .2s}
+.layer b{font-family:var(--display);font-size:1.1rem}
+.layer span{display:block;font-size:.95rem;line-height:1.3}
+.layer.dim{opacity:.35}
+.l-toppings{background:#7fd1a8}.l-kaas{background:#ffd75e}.l-saus{background:#f08a78}.l-bodem{background:#e8c58a}
+ul,ol{padding-left:1.3em;margin:0 0 .8em} li{margin-bottom:.35em}
+.checkrow{display:flex;gap:12px;align-items:flex-start;width:100%;text-align:left;justify-content:flex-start;min-height:56px;padding:10px 16px;margin-bottom:8px;font-family:var(--body);font-weight:700;font-size:1.05rem;line-height:1.35}
+.box{flex:0 0 28px;width:28px;height:28px;border-radius:8px;border:3px solid var(--ink);display:grid;place-items:center;font-size:1rem;margin-top:1px}
+.checkrow.on .box{background:var(--basil);border-color:var(--basil);color:var(--on-basil)}
+.log{border-top:2px solid var(--line);padding-top:12px;margin-top:12px}
+.log pre{white-space:pre-wrap;word-break:break-word;font-family:var(--body);font-size:1rem;margin:6px 0;background:var(--paper);border-radius:12px;padding:10px 12px}
+.diploma{text-align:center;border:6px double var(--dough);border-radius:24px;padding:32px 20px;background:var(--card)}
+.diploma h1{font-size:2.6rem}
+.foot{margin-top:28px;display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+.foot a{color:var(--muted);font-weight:700}
+.lessonnav{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:8px}
+@media (prefers-reduced-motion: no-preference){.bar>span{transition:width .4s}}
+
+.path{width:100%;max-width:340px;height:auto;margin:0 auto;display:block}
+.path a{cursor:pointer}
+.path text{font-family:var(--display);font-weight:700;font-size:18px;pointer-events:none}
+.flabel{display:block;font-family:var(--display);font-weight:600;margin:12px 0 4px}
+.goals{list-style:none;padding:0;margin:0 0 8px}
+.goals li{display:flex;gap:10px;margin-bottom:6px;align-items:flex-start}
+.goals .gm{flex:0 0 24px;width:24px;height:24px;border-radius:50%;display:grid;place-items:center;border:2px solid var(--muted);font-size:.85rem;margin-top:2px;color:var(--muted)}
+.goals li.ok .gm{background:var(--basil);border-color:var(--basil);color:var(--on-basil)}
+.chrow{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,190px) auto;gap:8px;margin-top:10px;align-items:center}
+@media (max-width:640px){.chrow{grid-template-columns:1fr}}
+select{font-family:var(--body);font-size:18px;min-height:52px;border:2px solid var(--line);border-radius:14px;background:var(--paper);color:var(--ink);padding:0 10px;width:100%}
+.player{border-radius:24px;padding:24px 20px;margin-bottom:16px}
+.player .ptitle{font-family:var(--display);font-weight:600;opacity:.8;margin:0 0 12px}
+.player .story{font-size:1.25rem;line-height:1.6;white-space:pre-wrap}
+.player h2{margin-top:8px}
+.pc{display:block;width:100%;text-align:left;justify-content:flex-start;margin-top:10px;min-height:56px;padding:10px 18px;background:rgba(255,255,255,.14);color:inherit;border-color:currentColor;font-family:var(--body);font-weight:800;font-size:1.1rem}
+.pg{background:transparent;color:inherit;border-color:currentColor}
+.scene textarea{min-height:100px}
+
+.thumb{display:block;max-width:220px;max-height:160px;width:auto;height:auto;border-radius:12px;border:2px solid var(--line);margin:12px 0 0}
+.deckplayer{margin-bottom:16px}
+.slide{position:relative;aspect-ratio:16/9;border-radius:20px;padding:5%;display:flex;gap:4%;align-items:center;overflow:hidden}
+.slide .sl-body{flex:1 1 0;min-width:0}
+.slide .sl-title{font-size:clamp(1.3rem,5.2vw,2.8rem);margin:0 0 .4em;line-height:1.1}
+.slide .sl-text{font-size:clamp(1rem,3vw,1.6rem);line-height:1.4;white-space:pre-wrap;margin:0}
+.slide .sl-img{flex:0 0 42%;height:100%;display:flex;align-items:center;justify-content:center}
+.slide .sl-img img{max-width:100%;max-height:100%;border-radius:12px}
+.slide .sl-deck{position:absolute;left:5%;bottom:3%;font-size:.8rem;opacity:.7}
+.ctl{justify-content:space-between;margin-top:14px}
+.cnt{font-family:var(--display);font-weight:600;color:var(--muted)}
+@media (max-width:520px){.slide{aspect-ratio:auto;min-height:60vw;flex-direction:column;align-items:flex-start;padding:6%}.slide .sl-img{flex:none;height:auto;width:100%}.slide .sl-deck{position:static}}
+
+.code{width:100%;min-height:260px;font-family:ui-monospace,Menlo,monospace;font-size:.95rem;line-height:1.4;padding:12px;border:2px solid var(--line);border-radius:14px;background:var(--card);color:var(--ink);box-sizing:border-box;-webkit-text-size-adjust:100%}
+.preview{width:100%;height:360px;border:2px solid var(--line);border-radius:14px;background:#fff;display:block}
+.preview.big{height:75vh}
+.vers{list-style:none;padding:0;margin:12px 0 0}.vers li{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:8px 0;border-top:1px solid var(--line)}
+.slot{padding:12px 0;border-top:1px solid var(--line)}.thumb{display:block;max-width:160px;max-height:120px;border-radius:10px;margin:8px 0}
+.flabel{display:block;font-weight:800;margin:12px 0 6px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="#start"><i aria-hidden="true"></i>Onderzoeker</a>
+    <nav class="nav" aria-label="Menu">
+      <a class="btn small" href="#start">Kaart</a>
+      <a class="btn small" href="#speeltuin">Onderzoeksschrift</a>
+      <a class="btn small" href="#logboek">Mijn logboek</a>
+    </nav>
+  </header>
+  <main id="app"><noscript><section class="card"><h2>Open Onderzoeker in Safari</h2><p>Deze cursus werkt niet in een voorbeeldvenster van Mail of Bestanden, want daar draaien de opdrachten niet. Open de link in Safari.</p></section></noscript></main>
+  <div class="foot" id="foot">
+    <a href="#spelregels">Spelregels</a>
+    <a href="#ouders">Voor ouders</a>
+  </div>
+</div>
+<script>
+(function(){
+"use strict";
+var KEY="onderzoeker-v1";
+
+/* ---------- state ---------- */
+function newItem(){return {q:"",a:"",src:"",v:""};}
+function newSite(){return {items:[newItem()]};}
+function defaults(){return {name:"",rules:false,done:{},drafts:{},manual:{},log:[],ans:{},checks:{},site:newSite()};}
+var S=load();
+function load(){try{var r=localStorage.getItem(KEY);if(r){var o=JSON.parse(r);var d=defaults();for(var k in d){if(o[k]!==undefined)d[k]=o[k];}if(!d.site||!Array.isArray(d.site.items)||!d.site.items.length)d.site=newSite();return d;}}catch(e){}return defaults();}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S));return true;}catch(e){return false;}}
+
+/* ---------- content ---------- */
+var LAYERS={
+ bodem:{n:"Bodem",d:"De opdracht",q:"Wat moet ChatGPT doen?",hint:"Zeg wat ChatGPT moet doen, bijvoorbeeld bedenk, schrijf of maak."},
+ saus:{n:"Saus",d:"De context",q:"Wie ben ik, voor wie is het en waarom?",hint:"Vertel wie je bent en waarvoor het is, bijvoorbeeld: Ik ben 10 en doe een onderzoek."},
+ kaas:{n:"Kaas",d:"Een voorbeeld",q:"Hoe moet het ongeveer worden?",hint:"Geef een voorbeeld met het woord zoals of bijvoorbeeld, of beschrijf de stijl."},
+ toppings:{n:"Toppings",d:"De regels",q:"Hoeveel, hoe lang, welke toon, wat niet?",hint:"Voeg regels toe: hoeveel zinnen of dia's, hoe kort, of wat niet."}
+};
+var THEMES={zee:["Zee","#0c3b5c","#e6f6ff"],bos:["Bos","#1f4d3a","#f2ffe9"],zon:["Zon","#ffd75e","#1c2340"],nacht:["Nacht","#14143a","#e8e8ff"]};
+var RULES=[
+ ["Geen geheimen delen","Typ nooit je achternaam, adres, school, telefoonnummer of foto's van mensen. Zet ze ook niet in je schrift."],
+ ["AI kan fout zitten","ChatGPT kan fouten maken en klinkt toch heel zeker. Controleer wat belangrijk is."],
+ ["Eerst zelf denken","Bedenk eerst wat jij zelf wilt en vraag het dan pas."],
+ ["Eerlijk blijven","Zeg erbij als ChatGPT je heeft geholpen met de code. Het idee en de keuzes zijn van jou."],
+ ["Vriendelijk blijven","Onderzoek geen echte mensen of andere kinderen. Kies vrolijke, veilige onderwerpen."],
+ ["Raar of eng antwoord?","Stop en haal meteen een volwassene. Dat is slim, niet stout."]
+];
+
+var LESSONS=[
+{id:1,title:"AI klinkt zeker, maar...",sub:"Waarom ChatGPT soms fout zit",steps:[
+ {t:"text",h:"ChatGPT kan zich vergissen",p:["ChatGPT kan heel goed taal maken, maar het weet niet echt of iets waar is. Soms bedenkt het dingen die kloppen als een zin, maar niet in de echte wereld.","Dat noem je ook wel verzinnen. Het gebeurt vooral bij moeilijke vragen, bij jaartallen, namen en bronnen."],list:["Het klinkt zeker, ook als het fout is.","Hoe specifieker de vraag, hoe groter de kans op een foutje.","Jij bent de controleur."]},
+ {t:"quiz",id:"q1",q:"ChatGPT zegt iets heel zeker. Is het dan waar?",opts:["Niet altijd, ik moet het controleren","Ja, want het klinkt zeker","Ja, want het is een computer"],ok:0,why:"Zeker klinken betekent niet dat het klopt."},
+ {t:"quiz",id:"q2",q:"Bij welke vraag is de kans op een fout het grootst?",opts:["In welk jaar werd een heel klein dorp gesticht?","Wat is 2 + 2?","Wat is een hond?"],ok:0,why:"Kleine, specifieke weetjes zijn moeilijker voor AI."},
+ {t:"prompt",id:"p1",title:"Vraag hoe zeker het is",task:"Vul in plaats van [onderwerp] iets in waar je veel over weet, zoals je huisdier, je sport of je favoriete spel.",start:"Vertel me 3 weetjes over [onderwerp]. Ik ben 10. Zeg er bij elk weetje bij hoe zeker je bent: zeker, vrij zeker of niet zeker. Gebruik maximaal 2 zinnen per weetje.",need:["bodem","saus","toppings"],min:60,forbid:["[","]"],forbidMsg:"Vervang [onderwerp] door een onderwerp waar jij veel over weet."},
+ {t:"offline",id:"o1",title:"Kijk of het klopt",text:"Je weet veel over dit onderwerp. Klopt alles wat ChatGPT zei? Zet een streepje bij wat klopt en een kruisje bij wat niet klopt."}
+]},
+{id:2,title:"Word detective",sub:"Controleren met twee bronnen",steps:[
+ {t:"text",h:"Een goede detective controleert",p:["Een detective gelooft niet meteen. Hij zoekt een tweede bron: een boek, een school-website, een volwassene of een encyclopedie voor kinderen.","Klopt het in twee bronnen? Dan is het waarschijnlijk waar."],tip:"Schrijf in het onderzoeksschrift op wat ChatGPT zei, waar je het hebt gecontroleerd en wat je concludeerde."},
+ {t:"quiz",id:"q1",q:"Wat is een goede tweede bron?",opts:["Een boek of een volwassene die het weet","Dezelfde ChatGPT nog eens vragen","Een gok"],ok:0,why:"Een onafhankelijke bron geeft het meeste vertrouwen."},
+ {t:"prompt",id:"p1",title:"Vraag om hulp bij controleren",task:"Vul in plaats van [weetje] een weetje in dat ChatGPT noemde.",start:"Je zei dit: [weetje]. Hoe kan ik controleren of dit klopt? Geef 3 tips voor een tienjarige, in maximaal 5 zinnen.",need:["bodem","saus","toppings"],min:60,forbid:["[","]"],forbidMsg:"Vervang [weetje] door een weetje van ChatGPT."},
+ {t:"webgoal",id:"g1",title:"Je eerste onderzoek",task:"Vul in het onderzoeksschrift 2 weetjes in, met je eigen oordeel.",checks:[
+  {label:"Je hebt 2 weetjes ingevuld (vraag en antwoord)",test:function(s){return cnt(s,function(x){return x.q.trim().length>=3&&x.a.trim().length>=3;})>=2;}},
+  {label:"Je hebt bij 2 weetjes een oordeel gekozen",test:function(s){return cnt(s,function(x){return !!x.v;})>=2;}},
+  {label:"Je hebt bij 1 weetje opgeschreven waar je het controleerde",test:function(s){return cnt(s,function(x){return x.src.trim().length>=3;})>=1;}}]},
+ {t:"reflect",id:"r1",q:"Wat vond je het moeilijkst aan controleren?",choices:[],ask:"Schrijf het op in een of twee zinnen."}
+]},
+{id:3,title:"Strikvragen",sub:"Zie hoe AI reageert op onzin",steps:[
+ {t:"text",h:"Wat doet AI als het niet weet?",p:["Je kunt AI testen met een vraag waar geen goed antwoord op bestaat, bijvoorbeeld over een verzonnen land of dier.","Een goed antwoord zegt: dat bestaat niet of dat weet ik niet. Een slecht antwoord verzint iets.","Je kunt ook vooraf vragen om eerlijk te zijn."],list:["Verzin een vraag over iets dat niet bestaat.","Kijk of ChatGPT het toegeeft.","Vraag daarna of het echt bestaat."]},
+ {t:"quiz",id:"q1",q:"Je vraagt naar de hoofdstad van een verzonnen land. Wat is een goed antwoord?",opts:["Dat land bestaat niet, zo ver ik weet.","Het antwoord is Zonnestad.","Het antwoord is een grote stad."],ok:0,why:"Een goed antwoord geeft toe wat het niet weet."},
+ {t:"prompt",id:"p1",title:"Test met een strikvraag",task:"Verzin zelf een land of dier in plaats van [verzonnen naam].",start:"Wat eten de [verzonnen naam] het liefst? Ik ben 10. Als je het niet zeker weet of als het niet bestaat, zeg dat dan eerlijk. Antwoord in maximaal 3 zinnen.",need:["bodem","saus","toppings"],min:60,forbid:["[","]"],forbidMsg:"Verzin een naam en vul die in."},
+ {t:"prompt",id:"p2",title:"Eerlijk zijn",task:"Plak een antwoord van ChatGPT in plaats van [antwoord].",start:"Je zei: [antwoord]. Weet je dit zeker? Zeg eerlijk welk deel je niet zeker weet. Antwoord in maximaal 3 zinnen.",need:["bodem","toppings"],min:50,forbid:["[","]"],forbidMsg:"Vervang [antwoord] door een antwoord van ChatGPT."},
+ {t:"webgoal",id:"g1",title:"Drie weetjes onderzocht",task:"Zet 3 weetjes in je onderzoeksschrift, ook de strikvraag.",checks:[
+  {label:"Je hebt 3 weetjes ingevuld",test:function(s){return cnt(s,function(x){return x.q.trim().length>=3&&x.a.trim().length>=3;})>=3;}},
+  {label:"Je hebt bij 3 weetjes een oordeel gekozen",test:function(s){return cnt(s,function(x){return !!x.v;})>=3;}},
+  {label:"Je hebt bij 2 weetjes een bron of controle opgeschreven",test:function(s){return cnt(s,function(x){return x.src.trim().length>=3;})>=2;}}]}
+]},
+{id:4,title:"Mijn onderzoeksregels",sub:"Slim gebruiken en controleren",steps:[
+ {t:"text",h:"Jij bent de baas",p:["AI is handig voor ideeën, uitleg en oefenen. Maar bij feiten, jaartallen en gezondheid controleer je altijd.","Maak nu je eigen regels, zodat je altijd weet wat je moet doen."]},
+ {t:"form",id:"f1",title:"Mijn drie onderzoeksregels",task:"Schrijf drie regels op die je voortaan gebruikt.",fields:[{l:"Regel 1",ph:"Bijvoorbeeld: Controleer jaartallen in een tweede bron"},{l:"Regel 2",ph:"Bijvoorbeeld: Vraag hoe zeker het is"},{l:"Regel 3",ph:"Bijvoorbeeld: Vraag een volwassene bij iets belangrijks"}]},
+ {t:"webgoal",id:"g1",title:"Je onderzoeksschrift",task:"Maak je onderzoeksschrift compleet.",checks:[
+  {label:"Je hebt 5 weetjes ingevuld",test:function(s){return cnt(s,function(x){return x.q.trim().length>=3&&x.a.trim().length>=3;})>=5;}},
+  {label:"Bij 5 weetjes staat een oordeel",test:function(s){return cnt(s,function(x){return !!x.v;})>=5;}},
+  {label:"Bij 3 weetjes staat een bron of controle",test:function(s){return cnt(s,function(x){return x.src.trim().length>=3;})>=3;}}]},
+ {t:"check",id:"k1",title:"Mijn controle",items:["Ik weet dat ChatGPT soms fout zit.","Ik controleer belangrijke feiten in een tweede bron.","Ik durf te zeggen: dat weet ik niet zeker.","Ik vraag een volwassene bij iets belangrijks."]},
+ {t:"reflect",id:"r1",q:"Wat ga je anders doen als je ChatGPT gebruikt?",choices:[],ask:"Schrijf het op in een of twee zinnen."}
+]}
+];
+
+/* ---------- helpers ---------- */
+var STEPS={};
+LESSONS.forEach(function(L){L.steps.forEach(function(s){if(s.id){STEPS[L.id+"-"+s.id]={L:L,s:s};}});});
+function esc(t){return String(t).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c];});}
+function $(id){return document.getElementById(id);}
+var RX={
+ bodem:/\b(bedenk|bedenken|schrijf|schrijven|maak|maken|leg|geef|vertel|teken|verzin|help|noem|vergelijk|stel|laat|bouw|plan|ontwerp|kun je|kan je|oefenen|oefen|verander|voeg|pas|herschrijf|controleer)\b/,
+ saus:/\b(ik ben|ik zit|ik heb|ik wil|ik vind|ik ga|alsof ik|mijn|voor mij|voor een|voor de|omdat|zodat)\b/,
+ kaas:/(bijvoorbeeld|zoals|voorbeeld|zo'n|zo een|net als|in de stijl|stijl van)/,
+ toppings:/(\d|\bkort|\blang|grappig|spannend|makkelijk|simpel|eenvoudig|woorden|zinnen|regels|\bniet\b|\bgeen\b|maximaal|minimaal|alinea|stappen|rijm|onder|zonder|dia's|alleen|hetzelfde|dezelfde|codeblok)/
+};
+function detect(t){t=(t||"").toLowerCase();return {bodem:RX.bodem.test(t),saus:RX.saus.test(t),kaas:RX.kaas.test(t),toppings:RX.toppings.test(t)};}
+function eff(key,layer,auto){var m=S.manual[key];return (m&&m[layer]!==undefined)?m[layer]:auto[layer];}
+function draftOf(key){var e=STEPS[key];if(S.drafts[key]!==undefined)return S.drafts[key];return e.s.start||"";}
+
+function cnt(s,f){return s.items.filter(f).length;}
+function has(re){return function(s){return re.test(s.code);};}
+function reqs(g){return (g.checks||[]).map(function(c){return {ok:!!c.test(S.site),label:c.label};});}
+function stepDone(key){var e=STEPS[key];if(e&&e.s.t==="webgoal")return reqs(e.s).every(function(x){return x.ok;});return !!S.done[key];}
+function progress(L){var t=0,d=0;L.steps.forEach(function(s){if(s.id){t++;if(stepDone(L.id+"-"+s.id))d++;}});return {t:t,d:d};}
+function lessonFinished(L){var p=progress(L);return p.d===p.t;}
+function allFinished(){return LESSONS.every(lessonFinished);}
+function pct(L){var p=progress(L);return Math.round(100*p.d/p.t);}
+var N=LESSONS.length;
+
+/* ---------- views ---------- */
+function layersHTML(hl){
+ var order=["toppings","kaas","saus","bodem"];var widths={toppings:"68%",kaas:"80%",saus:"90%",bodem:"100%"};
+ return "<div class=\"layers\" role=\"list\">"+order.map(function(k){
+  var L=LAYERS[k];var dim=hl&&hl.indexOf(k)<0?" dim":"";
+  return "<div class=\"layer l-"+k+dim+"\" role=\"listitem\" style=\"width:"+widths[k]+"\"><b>"+L.n+": "+L.d+"</b><span>"+L.q+"</span></div>";
+ }).join("")+"</div>";
+}
+function pathSVG(){
+ var out="<svg class=\"path\" viewBox=\"0 0 300 130\" role=\"img\" aria-label=\"Pad met "+N+" stops, een per les\">";
+ var pts=LESSONS.map(function(L,i){return [30+i*48,i%2===0?88:42];});
+ out+="<polyline points=\""+pts.map(function(p){return p.join(",");}).join(" ")+"\" fill=\"none\" stroke=\"var(--dough)\" stroke-width=\"6\" stroke-dasharray=\"2 10\" stroke-linecap=\"round\"/>";
+ LESSONS.forEach(function(L,i){
+  var p=pts[i],fin=lessonFinished(L);
+  out+="<a href=\"#les-"+L.id+"\" aria-label=\"Les "+L.id+": "+L.title+(fin?" (klaar)":"")+"\"><circle cx=\""+p[0]+"\" cy=\""+p[1]+"\" r=\"18\" fill=\""+(fin?"var(--tomato)":"var(--dough-soft)")+"\" stroke=\""+(fin?"var(--tomato)":"var(--dough)")+"\" stroke-width=\"3\"/><text x=\""+p[0]+"\" y=\""+(p[1]+7)+"\" text-anchor=\"middle\" fill=\""+(fin?"var(--on-tomato)":"#1c2340")+"\">"+L.id+"</text></a>";
+ });
+ var last=pts[pts.length-1];
+ out+="<path d=\"M"+(last[0]+24)+" "+(last[1]-6)+" L"+(last[0]+24)+" "+(last[1]-34)+" L"+(last[0]+42)+" "+(last[1]-27)+" L"+(last[0]+24)+" "+(last[1]-20)+"\" fill=\"var(--sun)\" stroke=\"var(--ink)\" stroke-width=\"2\" stroke-linejoin=\"round\"/>";
+ return out+"</svg>";
+}
+function rulesHTML(){return "<ol>"+RULES.map(function(r){return "<li><b>"+r[0]+".</b> "+r[1]+"</li>";}).join("")+"</ol>";}
+function onboarding(){
+ return "<section class=\"card\"><h1>Welkom bij Onderzoeker</h1><p>In "+N+" lessen word je AI-detective. Je leert dat ChatGPT soms fout zit en hoe je dat controleert. In je onderzoeksschrift hou je bij wat je ontdekt.</p>"+
+ "<h2>Hoe heet je?</h2><input type=\"text\" id=\"nm\" autocomplete=\"off\" maxlength=\"24\" placeholder=\"Jouw voornaam\" aria-label=\"Jouw voornaam\" value=\""+esc(S.name)+"\">"+
+ "<h2 style=\"margin-top:24px\">De 6 spelregels</h2>"+rulesHTML()+
+ "<p>Gebruik ChatGPT alleen als een volwassene in de buurt is.</p>"+
+ "<button class=\"checkrow\" data-act=\"agree\" id=\"agree\" aria-pressed=\"false\"><span class=\"box\"></span><span>Ik heb de spelregels gelezen en beloof ze te volgen.</span></button>"+
+ "<p class=\"status\" id=\"obst\" role=\"status\"></p><button class=\"primary\" data-act=\"start\">Aan de slag</button></section>";
+}
+function homeView(){
+ var fin=LESSONS.filter(lessonFinished).length;
+ var h="<section class=\"card hero\"><div><h1>Hoi "+esc(S.name||"")+"!</h1><p>Elke les brengt je een stap verder. Aan het eind weet je hoe je AI controleert.</p><p><b>"+fin+" van "+N+" lessen klaar.</b></p><div class=\"row\">";
+ if(allFinished())h+="<a class=\"btn primary\" href=\"#diploma\">Bekijk je diploma</a>";
+ else{var next=LESSONS.filter(function(L){return !lessonFinished(L);})[0];h+="<a class=\"btn primary\" href=\"#les-"+next.id+"\">"+(fin?"Ga verder met les "+next.id:"Start les 1")+"</a>";}
+ h+="<a class=\"btn\" href=\"#speeltuin\">Open je onderzoeksschrift</a></div></div><div>"+pathSVG()+"</div></section>";
+ h+="<h2>Alle lessen</h2><ul class=\"lessons\">"+LESSONS.map(function(L){
+  var p=progress(L),f=lessonFinished(L);
+  return "<li><a class=\"lesson"+(f?" finished":"")+"\" href=\"#les-"+L.id+"\"><span class=\"num\">"+L.id+"</span><span><b>"+L.title+"</b><small>"+L.sub+"</small><div class=\"bar\" aria-hidden=\"true\"><span style=\"width:"+pct(L)+"%\"></span></div></span><span class=\"go\">"+(f?"Klaar":p.d+"/"+p.t)+"</span></a></li>";
+ }).join("")+"</ul>";
+ return h;
+}
+function tagFor(t){return {quiz:["denk","Weet je het?"],prompt:["probeer","Probeer"],offline:["samen","Doe het samen"],reflect:["denk","Denk na"],check:["denk","Check"],form:["denk","Schrijf op"],webgoal:["samen","Bouwen"]}[t];}
+function badge(key){return stepDone(key)?"<span class=\"done-badge\">Klaar</span>":"";}
+function chipsHTML(key){
+ var s=STEPS[key].s;if(!s.need||!s.need.length)return "";
+ var auto=detect(draftOf(key));
+ return ["bodem","saus","kaas","toppings"].map(function(l){
+  var on=eff(key,l,auto),needed=s.need.indexOf(l)>=0;
+  return "<button class=\"chip"+(needed?" needed":"")+(on?" on":"")+"\" data-act=\"layer\" data-key=\""+key+"\" data-layer=\""+l+"\" aria-pressed=\""+on+"\">"+(on?"✓ ":"")+LAYERS[l].n+(needed?" (nodig)":"")+"</button>";
+ }).join("");
+}
+function stepHTML(L,s){
+ var key=L.id+"-"+s.id,tg=s.t==="text"?null:tagFor(s.t),h="";
+ if(s.t==="text"){
+  h+="<section class=\"card\"><span class=\"tag ontdek\">Ontdek</span><h2>"+s.h+"</h2>"+(s.p||[]).map(function(p){return "<p>"+p+"</p>";}).join("");
+  if(s.list)h+="<ul>"+s.list.map(function(i){return "<li>"+i+"</li>";}).join("")+"</ul>";
+  if(s.layers)h+=layersHTML(s.layers);
+  if(s.tip)h+="<div class=\"tip\"><b>Tip.</b> "+s.tip+"</div>";
+  return h+"</section>";
+ }
+ h+="<section class=\"card\" id=\"s-"+key+"\"><span class=\"tag "+tg[0]+"\">"+tg[1]+"</span>"+badge(key);
+ if(s.t==="quiz"){
+  h+="<h3>"+s.q+"</h3>"+s.opts.map(function(o,i){
+   var cls="opt"+(stepDone(key)&&i===s.ok?" right":"");
+   return "<button class=\""+cls+"\" data-act=\"quiz\" data-key=\""+key+"\" data-i=\""+i+"\">"+o+"</button>";
+  }).join("")+"<p class=\"fb\" id=\"fb-"+key+"\" role=\"status\">"+(stepDone(key)?"Goed! "+s.why:"")+"</p>";
+ }else if(s.t==="prompt"){
+  h+="<h3>"+s.title+"</h3><p>"+s.task+"</p>"+
+   "<textarea id=\"ta-"+key+"\" data-key=\""+key+"\" rows=\"5\" placeholder=\"Schrijf hier je prompt\" aria-label=\"Jouw prompt\">"+esc(draftOf(key))+"</textarea>"+
+   "<div class=\"chips\" id=\"chips-"+key+"\">"+chipsHTML(key)+"</div>"+
+   (s.need&&s.need.length?"<p class=\"hintline\">De robot zoekt de lagen in je tekst, maar hij kan zich vergissen. Tik op een laag om hem zelf aan of uit te zetten.</p>":"")+
+   "<div class=\"row\"><button data-act=\"copy\" data-key=\""+key+"\">Kopieer prompt</button><a class=\"btn ghost\" href=\"https://chatgpt.com\" target=\"_blank\" rel=\"noopener\">Open ChatGPT</a><button class=\"primary\" data-act=\"savep\" data-key=\""+key+"\">Bewaar in logboek</button></div>"+
+   "<p class=\"status\" id=\"st-"+key+"\" role=\"status\"></p>";
+ }else if(s.t==="offline"){
+  h+="<h3>"+s.title+"</h3><p>"+s.text+"</p><button class=\"checkrow"+(stepDone(key)?" on":"")+"\" data-act=\"off\" data-key=\""+key+"\" aria-pressed=\""+stepDone(key)+"\"><span class=\"box\">"+(stepDone(key)?"✓":"")+"</span><span>Dit hebben we gedaan</span></button>";
+ }else if(s.t==="reflect"){
+  var a=S.ans[key]||{c:null,t:""};
+  h+="<h3>"+s.q+"</h3>"+(s.choices||[]).map(function(c,i){return "<button class=\"opt"+(a.c===i?" sel":"")+"\" data-act=\"rc\" data-key=\""+key+"\" data-i=\""+i+"\" aria-pressed=\""+(a.c===i)+"\">"+c+"</button>";}).join("")+
+   "<p>"+s.ask+"</p><textarea data-rkey=\""+key+"\" rows=\"3\" aria-label=\"Jouw antwoord\">"+esc(a.t||"")+"</textarea>"+
+   "<div class=\"row\"><button class=\"primary\" data-act=\"rsave\" data-key=\""+key+"\">Opslaan</button></div><p class=\"status\" id=\"st-"+key+"\" role=\"status\"></p>";
+ }else if(s.t==="check"){
+  var cs=S.checks[key]||[];
+  h+="<h3>"+s.title+"</h3>"+s.items.map(function(it,i){return "<button class=\"checkrow"+(cs[i]?" on":"")+"\" data-act=\"chk\" data-key=\""+key+"\" data-i=\""+i+"\" aria-pressed=\""+!!cs[i]+"\"><span class=\"box\">"+(cs[i]?"✓":"")+"</span><span>"+it+"</span></button>";}).join("");
+ }else if(s.t==="form"){
+  var fa=S.ans[key];if(!Array.isArray(fa))fa=[];
+  h+="<h3>"+s.title+"</h3><p>"+s.task+"</p>"+s.fields.map(function(f,i){return "<label class=\"flabel\" for=\"f-"+key+"-"+i+"\">"+f.l+"</label><input type=\"text\" id=\"f-"+key+"-"+i+"\" data-fkey=\""+key+"\" data-fi=\""+i+"\" maxlength=\"140\" placeholder=\""+f.ph+"\" value=\""+esc(fa[i]||"")+"\">";}).join("")+
+   "<div class=\"row\"><button class=\"primary\" data-act=\"fsave\" data-key=\""+key+"\">Opslaan</button></div><p class=\"status\" id=\"st-"+key+"\" role=\"status\"></p>";
+ }else if(s.t==="webgoal"){
+  h+="<h3>"+s.title+"</h3><p>"+s.task+"</p><ul class=\"goals\">"+reqs(s).map(function(r){return "<li class=\""+(r.ok?"ok":"")+"\"><span class=\"gm\" aria-hidden=\"true\">"+(r.ok?"✓":"○")+"</span> "+r.label+"</li>";}).join("")+"</ul><div class=\"row\"><a class=\"btn primary\" href=\"#speeltuin\">Open je onderzoeksschrift</a></div>";
+ }
+ return h+"</section>";
+}
+function lessonView(n){
+ var L=LESSONS[n-1];if(!L)return homeView();
+ var h="<section class=\"card\"><p style=\"margin:0;color:var(--muted);font-weight:700\">Les "+L.id+" van "+N+"</p><h1>"+L.title+"</h1><p>"+L.sub+"</p><div class=\"bar\" aria-hidden=\"true\"><span style=\"width:"+pct(L)+"%\"></span></div><p class=\"hintline\">"+progress(L).d+" van "+progress(L).t+" opdrachten klaar</p></section>";
+ h+=L.steps.map(function(s){return stepHTML(L,s);}).join("");
+ if(lessonFinished(L))h+="<section class=\"card good\"><h2>Les "+L.id+" is klaar!</h2><p>Je bent weer een stap verder.</p></section>";
+ h+="<div class=\"lessonnav\">"+(n>1?"<a class=\"btn\" href=\"#les-"+(n-1)+"\">Vorige les</a>":"<span></span>")+
+   (n<N?"<a class=\"btn primary\" href=\"#les-"+(n+1)+"\">Volgende les</a>":"<a class=\"btn primary\" href=\"#start\">Naar de kaart</a>")+"</div>";
+ return h;
+}
+
+/* ---------- speeltuin ---------- */
+var play=null;
+var VERD=[["klopt","Klopt"],["twijfel","Niet zeker"],["fout","Fout"]];
+function siteView(){
+ var items=S.site.items;
+ var h="<section class=\"card\"><h1>Onderzoeksschrift</h1><p>Schrijf op wat je aan ChatGPT vroeg en wat het antwoordde. Controleer het dan en kies jouw oordeel. Alles wordt vanzelf bewaard op deze iPad.</p></section>";
+ items.forEach(function(it,i){
+  h+="<section class=\"card\"><h3>Weetje "+(i+1)+"</h3>"+
+  "<label class=\"flabel\" for=\"q"+i+"\">Mijn vraag</label><input type=\"text\" id=\"q"+i+"\" data-i=\""+i+"\" data-f=\"q\" maxlength=\"200\" value=\""+esc(it.q)+"\">"+
+  "<label class=\"flabel\" for=\"a"+i+"\">Wat ChatGPT zei</label><textarea id=\"a"+i+"\" data-i=\""+i+"\" data-f=\"a\" rows=\"3\">"+esc(it.a)+"</textarea>"+
+  "<label class=\"flabel\" for=\"s"+i+"\">Waar ik het controleerde</label><input type=\"text\" id=\"s"+i+"\" data-i=\""+i+"\" data-f=\"src\" maxlength=\"200\" placeholder=\"Bijvoorbeeld boek, school of mijn moeder\" value=\""+esc(it.src)+"\">"+
+  "<p class=\"flabel\">Mijn oordeel</p><div class=\"row\">"+VERD.map(function(v){return "<button class=\"opt"+(it.v===v[0]?" sel":"")+"\" data-act=\"verd\" data-i=\""+i+"\" data-key=\""+v[0]+"\">"+v[1]+"</button>";}).join("")+"</div>"+
+  (items.length>1?"<div class=\"row\"><button class=\"small ghost\" data-act=\"idel\" data-i=\""+i+"\">Weetje weghalen</button></div>":"")+"</section>";
+ });
+ h+="<div class=\"row\"><button class=\"primary\" data-act=\"iadd\">Nog een weetje</button></div>";
+ return h;
+}
+function refreshPreview(){}
+
+/* ---------- other views ---------- */
+function logView(){
+ var h="<section class=\"card\"><h1>Mijn logboek</h1><p>Hier staan al je bewaarde prompts. Kijk wat het best werkte en gebruik het weer.</p></section>";
+ if(!S.log.length)return h+"<section class=\"card\"><p>Je hebt nog geen prompts bewaard. Maak een prompt in een les en tik op Bewaar in logboek.</p></section>";
+ var list=S.log.slice().sort(function(a,b){return a.d<b.d?1:-1;});
+ return h+"<section class=\"card\">"+list.map(function(e){
+  return "<div class=\"log\"><b>Les "+e.lesson+": "+esc(e.title)+"</b><pre>"+esc(e.text)+"</pre><button class=\"small\" data-act=\"copylog\" data-key=\""+esc(e.key)+"\">Kopieer</button></div>";
+ }).join("")+"<p class=\"status\" id=\"logst\" role=\"status\"></p></section>";
+}
+function rulesView(){return "<section class=\"card\"><h1>De 6 spelregels</h1>"+rulesHTML()+"<p>Gebruik ChatGPT alleen als een volwassene in de buurt is.</p></section>";}
+function parentsView(){
+ return "<section class=\"card\"><h1>Voor ouders</h1>"+
+ "<h3>Zo werkt het</h3><p>Onderzoeker is het zesde deel van de AI-cursus. In 4 lessen van 30 tot 45 minuten leren de kinderen dat ChatGPT zich kan vergissen, hoe ze met twee bronnen controleren, hoe AI op strikvragen reageert en welke eigen onderzoeksregels ze voortaan gebruiken. Ze leggen hun bevindingen vast in een onderzoeksschrift.</p>"+
+ "<h3>De pizza-robot</h3><p>Onder elke prompt zoekt een eenvoudig programma naar de lagen van de Prompt-Pizza. Het kijkt alleen naar bepaalde woorden en kan zich vergissen. Het kind kan elke laag zelf aan of uit zetten.</p>"+
+ "<h3>Controleren</h3><p>Help bij het controleren in een boek of op een betrouwbare kinderwebsite. Het gaat er niet om dat AI slecht is, maar dat kinderen leren zelf te checken.</p>"+
+ "<h3>ChatGPT en leeftijd</h3><p>OpenAI zegt dat ChatGPT niet bedoeld is voor kinderen onder 13, en ouderlijk toezicht is er alleen voor gekoppelde tienerrekeningen vanaf 13. Zit er daarom bij en lees de actuele voorwaarden. Hoe jullie hiermee omgaan is jouw keuze.</p>"+
+ "<h3>Voortgang</h3><p>Voortgang, logboek, code en plaatjes staan alleen op dit apparaat, in deze browser. Wis je de browsergegevens, dan zijn ze weg. Kopieer de code dus af en toe als reservekopie.</p>"+
+ "<div id=\"resetbox\"><button data-act=\"reset1\">Alles wissen</button></div></section>";
+}
+function diplomaView(){
+ if(!allFinished())return "<section class=\"card\"><h2>Nog niet klaar</h2><p>Maak eerst alle "+N+" lessen af.</p><a class=\"btn primary\" href=\"#start\">Naar de kaart</a></section>";
+ var d=new Date().toLocaleDateString("nl-NL",{day:"numeric",month:"long",year:"numeric"});
+ return "<section class=\"diploma\"><p style=\"font-weight:700;color:var(--muted)\">Dit diploma is voor</p><h1>"+esc(S.name)+"</h1><h2>Onderzoeker</h2>"+
+ "<p>Je weet dat AI zich kan vergissen, je controleert met twee bronnen en je hebt eigen onderzoeksregels gemaakt.</p>"+
+ "<p><b>"+d+"</b></p><p style=\"color:var(--muted)\">Maak een schermafbeelding om dit diploma te bewaren.</p></section>"+
+ "<div class=\"row\" style=\"justify-content:center\"><a class=\"btn\" href=\"#speeltuin\">Bekijk je schrift</a><a class=\"btn\" href=\"#start\">Naar de kaart</a></div>";
+}
+
+/* ---------- render ---------- */
+var lastRoute=null;
+function route(){return (location.hash||"").replace("#","")||"start";}
+function render(keep){
+ var r=route(),app=$("app"),y=window.scrollY;
+ if(!S.rules&&r!=="ouders"&&r!=="spelregels"){app.innerHTML=onboarding();lastRoute=r;return;}
+ var m=/^les-(\d+)$/.exec(r);
+ if(r!=="speeltuin")play=null;
+ if(m)app.innerHTML=lessonView(parseInt(m[1],10));
+ else if(r==="speeltuin"){app.innerHTML=siteView();refreshPreview();}
+ else if(r==="logboek")app.innerHTML=logView();
+ else if(r==="spelregels")app.innerHTML=rulesView();
+ else if(r==="ouders")app.innerHTML=parentsView();
+ else if(r==="diploma")app.innerHTML=diplomaView();
+ else app.innerHTML=homeView();
+ if(keep||lastRoute===r)window.scrollTo(0,y);else window.scrollTo(0,0);
+ lastRoute=r;
+}
+window.addEventListener("hashchange",function(){render(false);});
+
+/* ---------- actions ---------- */
+function say(id,msg){var e=$(id);if(e)e.textContent=msg;}
+function updateChips(key){var c=$("chips-"+key);if(c)c.innerHTML=chipsHTML(key);}
+document.addEventListener("input",function(e){
+ var t=e.target;if(!t.matches)return;
+ if(t.matches("textarea[data-key]")){var key=t.getAttribute("data-key");S.drafts[key]=t.value;save();updateChips(key);}
+ else if(t.matches("textarea[data-rkey]")){var k=t.getAttribute("data-rkey");var a=S.ans[k]||{c:null,t:""};a.t=t.value;S.ans[k]=a;save();}
+ else if(t.matches("input[data-fkey]")){var fk=t.getAttribute("data-fkey"),fi=parseInt(t.getAttribute("data-fi"),10);var arr=Array.isArray(S.ans[fk])?S.ans[fk]:[];arr[fi]=t.value;S.ans[fk]=arr;save();}
+ else if(t.matches("[data-f]")){var it=S.site.items[parseInt(t.getAttribute("data-i"),10)];if(it){it[t.getAttribute("data-f")]=t.value;save();}}
+});
+document.addEventListener("change",function(e){
+ var t=e.target;if(t.matches&&t.matches("input[data-img]")){var i=parseInt(t.getAttribute("data-img"),10);var f=t.files&&t.files[0];t.value="";processImage(f,i);}
+});
+function copyFrom(text,ta,stId,okMsg){
+ var done=function(){say(stId,okMsg||"Gekopieerd! Plak hem nu in ChatGPT.");};
+ var fail=function(){if(ta){ta.focus();ta.setSelectionRange(0,99999);}say(stId,"Tik op de geselecteerde tekst en kies Kopieer.");};
+ try{if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(text).then(done,fail);}else{fail();}}catch(err){fail();}
+}
+document.addEventListener("click",function(e){
+ var b=e.target.closest?e.target.closest("[data-act]"):null;if(!b)return;
+ var act=b.getAttribute("data-act"),key=b.getAttribute("data-key"),i=parseInt(b.getAttribute("data-i"),10);
+ if(act==="agree"){var on=b.classList.toggle("on");b.setAttribute("aria-pressed",on);b.querySelector(".box").textContent=on?"✓":"";return;}
+ if(act==="start"){
+  var nm=($("nm").value||"").trim();var ag=$("agree").classList.contains("on");
+  if(!nm){say("obst","Vul eerst je naam in.");return;}
+  if(!ag){say("obst","Tik eerst op het vakje om te beloven dat je de spelregels volgt.");return;}
+  S.name=nm;S.rules=true;save();if(route()!=="start")location.hash="#start";render(false);return;
+ }
+ if(act==="quiz"){
+  var s=STEPS[key].s;var fb=$("fb-"+key);
+  if(i===s.ok){S.done[key]=true;save();render(true);}
+  else{b.classList.add("wrong");if(fb)fb.textContent="Nog niet. Probeer een ander antwoord.";}
+  return;
+ }
+ if(act==="layer"){
+  var l=b.getAttribute("data-layer");var auto=detect(draftOf(key));var cur=eff(key,l,auto);
+  S.manual[key]=S.manual[key]||{};S.manual[key][l]=!cur;save();updateChips(key);return;
+ }
+ if(act==="copy"){var ta=$("ta-"+key);copyFrom(ta.value,ta,"st-"+key);return;}
+ if(act==="savep"){
+  var e2=STEPS[key],s2=e2.s,ta2=$("ta-"+key),text=ta2.value.trim(),au=detect(text);
+  if(text.length<(s2.min||10)){say("st-"+key,"Schrijf nog wat meer. Een goede prompt is meestal een of twee zinnen.");return;}
+  if(s2.forbid&&s2.forbid.some(function(f){return text.indexOf(f)>=0;})){say("st-"+key,s2.forbidMsg);return;}
+  var miss=(s2.need||[]).filter(function(l2){return !eff(key,l2,au);});
+  if(miss.length){say("st-"+key,"Nog niet klaar. Er mist nog: "+miss.map(function(l3){return LAYERS[l3].n.toLowerCase()+". "+LAYERS[l3].hint;}).join(" "));return;}
+  S.drafts[key]=text;S.done[key]=true;
+  var entry={key:key,lesson:e2.L.id,title:s2.title,text:text,d:new Date().toISOString()};
+  var found=false;S.log=S.log.map(function(x){if(x.key===key){found=true;return entry;}return x;});if(!found)S.log.push(entry);
+  save();render(true);return;
+ }
+ if(act==="off"){if(S.done[key])delete S.done[key];else S.done[key]=true;save();render(true);return;}
+ if(act==="rc"){var a=S.ans[key]||{c:null,t:""};a.c=i;S.ans[key]=a;save();render(true);return;}
+ if(act==="rsave"){
+  var s3=STEPS[key].s,a3=S.ans[key]||{c:null,t:""},ta3=document.querySelector("textarea[data-rkey=\""+key+"\"]");if(ta3)a3.t=ta3.value;
+  if(s3.choices&&s3.choices.length){if(a3.c===null){say("st-"+key,"Kies eerst een antwoord.");return;}}
+  else if((a3.t||"").trim().length<5){say("st-"+key,"Schrijf nog wat meer op.");return;}
+  S.ans[key]=a3;S.done[key]=true;save();render(true);return;
+ }
+ if(act==="fsave"){
+  var fs=STEPS[key].s,fa=Array.isArray(S.ans[key])?S.ans[key]:[];
+  for(var q=0;q<fs.fields.length;q++){if((fa[q]||"").trim().length<3){say("st-"+key,"Vul bij "+fs.fields[q].l+" nog iets in.");return;}}
+  S.done[key]=true;save();render(true);return;
+ }
+ if(act==="chk"){
+  var arr=S.checks[key]||[];arr[i]=!arr[i];S.checks[key]=arr;
+  var n=STEPS[key].s.items.length,all=true;for(var z=0;z<n;z++){if(!arr[z])all=false;}
+  if(all)S.done[key]=true;else delete S.done[key];save();render(true);return;
+ }
+ if(act==="copylog"){var ent=S.log.filter(function(x){return x.key===key;})[0];if(ent)copyFrom(ent.text,null,"logst");return;}
+ /* schrift */
+ if(act==="verd"){S.site.items[i].v=(S.site.items[i].v===key?"":key);save();render(true);return;}
+ if(act==="iadd"){S.site.items.push(newItem());save();render(true);return;}
+ if(act==="idel"){S.site.items.splice(i,1);if(!S.site.items.length)S.site.items.push(newItem());save();render(true);return;}
+ if(act==="reset1"){$("resetbox").innerHTML="<p><b>Weet je zeker dat je alles wilt wissen?</b> Dit kan niet ongedaan worden gemaakt.</p><button class=\"primary\" data-act=\"reset2\">Ja, alles wissen</button> <button data-act=\"reset0\">Nee, terug</button>";return;}
+ if(act==="reset0"){$("resetbox").innerHTML="<button data-act=\"reset1\">Alles wissen</button>";return;}
+ if(act==="reset2"){S=defaults();save();location.hash="#start";render(false);return;}
+});
+render(false);
+})();
+
+</script>
+</body>
+</html>
