@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mijn Presentatie</title>
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<meta name="apple-mobile-web-app-title" content="Mijn Presentatie">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* Plan: presentatie-cursus voor 9-11 jaar. Inktblauw, paars, zon-geel, groen, zand.
+   Layout: een brede kolom, grote tikvlakken voor iPad, een pizza als voortgangskaart. */
+:root{
+  --ink:#1c2340; --paper:#f1f4ff; --card:#ffffff; --line:#d9deef; --soft:#e9edfb; --muted:#566086;
+  --tomato:#6a46d4; --on-tomato:#ffffff; --sun:#ffc531; --basil:#17835a; --on-basil:#ffffff;
+  --dough:#e8c58a; --dough-soft:#f3e3c1; --blue:#2a62ff; --bad:#fdeceb; --good:#e3f6ec;
+  --display:"Fredoka","Trebuchet MS",system-ui,sans-serif; --body:"Nunito",system-ui,-apple-system,"Segoe UI",sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ink:#eef0ff; --paper:#121629; --card:#1c2240; --line:#323a63; --soft:#262d52; --muted:#aab2d8;
+    --tomato:#a996ff; --on-tomato:#1a1038; --basil:#3cc593; --on-basil:#0b2a1f;
+    --dough-soft:#3a3550; --blue:#8aa8ff; --bad:#3b2230; --good:#17332b; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --ink:#eef0ff; --paper:#121629; --card:#1c2240; --line:#323a63; --soft:#262d52; --muted:#aab2d8;
+  --tomato:#a996ff; --on-tomato:#1a1038; --basil:#3cc593; --on-basil:#0b2a1f;
+  --dough-soft:#3a3550; --blue:#8aa8ff; --bad:#3b2230; --good:#17332b; color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:18px;line-height:1.55;-webkit-text-size-adjust:100%}
+.wrap{max-width:880px;margin:0 auto;padding:16px 16px calc(72px + env(safe-area-inset-bottom));padding-top:calc(16px + env(safe-area-inset-top))}
+h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.15;margin:0 0 .5em;text-wrap:balance}
+h1{font-size:2.3rem} h2{font-size:1.55rem} h3{font-size:1.25rem}
+p{margin:0 0 .8em}
+a{color:var(--blue)}
+:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:18px}
+.brand{font-family:var(--display);font-weight:700;font-size:1.4rem;text-decoration:none;color:var(--ink);display:flex;align-items:center;gap:10px}
+.brand i{display:inline-block;width:28px;height:28px;border-radius:50%;background:radial-gradient(circle at 35% 35%,var(--sun) 0 22%,var(--tomato) 24% 100%);border:3px solid var(--dough)}
+.nav{display:flex;gap:8px;flex-wrap:wrap}
+.btn,button{font-family:var(--display);font-weight:600;font-size:1.05rem;min-height:52px;padding:0 20px;border-radius:14px;border:2px solid var(--ink);background:var(--card);color:var(--ink);cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;touch-action:manipulation}
+.btn.small,button.small{min-height:44px;padding:0 14px;font-size:1rem}
+.primary{background:var(--tomato);border-color:var(--tomato);color:var(--on-tomato)}
+.ghost{background:transparent}
+button:disabled{opacity:.5;cursor:default}
+.card{background:var(--card);border:2px solid var(--line);border-radius:22px;padding:20px;margin-bottom:16px}
+.tag{display:inline-block;font-family:var(--display);font-weight:600;font-size:.85rem;padding:2px 12px;border-radius:99px;margin-bottom:10px;background:var(--soft);color:var(--ink)}
+.tag.probeer{background:var(--sun);color:#1c2340}
+.tag.ontdek{background:var(--blue);color:#fff}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .tag.ontdek{color:#10163a}}
+:root[data-theme="dark"] .tag.ontdek{color:#10163a}
+.tag.samen{background:var(--basil);color:var(--on-basil)}
+.tag.denk{background:var(--dough);color:#1c2340}
+.done-badge{float:right;font-family:var(--display);font-weight:600;background:var(--basil);color:var(--on-basil);border-radius:99px;padding:2px 14px;font-size:.9rem}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:12px}
+textarea,input[type=text]{width:100%;font-family:var(--body);font-size:18px;line-height:1.5;color:var(--ink);background:var(--paper);border:2px solid var(--line);border-radius:14px;padding:12px 14px}
+textarea{resize:vertical;min-height:120px}
+.bad,.good{border-radius:14px;padding:10px 14px;margin:0 0 12px}
+.bad{background:var(--bad)} .good{background:var(--good)}
+.tip{background:var(--soft);border-left:6px solid var(--sun);border-radius:12px;padding:10px 14px;margin-top:12px}
+.status{min-height:1.5em;margin:10px 0 0;font-weight:700}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.chip{min-height:44px;padding:0 16px;font-size:1rem;border-radius:99px;border-style:dashed;border-color:var(--muted);color:var(--muted);background:transparent}
+.chip.needed{border-style:solid;border-color:var(--ink);color:var(--ink)}
+.chip.on{background:var(--basil);border-color:var(--basil);color:var(--on-basil);border-style:solid}
+.hintline{font-size:.95rem;color:var(--muted);margin:8px 0 0}
+.opt{display:block;width:100%;text-align:left;justify-content:flex-start;margin-bottom:10px;min-height:56px;padding:10px 18px;font-family:var(--body);font-weight:700;font-size:1.05rem;line-height:1.35}
+.opt.right{background:var(--basil);border-color:var(--basil);color:var(--on-basil)}
+.opt.wrong{background:var(--bad);border-color:var(--tomato)}
+.opt.sel{border-color:var(--blue);box-shadow:inset 0 0 0 3px var(--blue)}
+.fb{margin:6px 0 0;font-weight:700}
+.bar{height:12px;border-radius:99px;background:var(--soft);overflow:hidden}
+.bar>span{display:block;height:100%;background:var(--basil);border-radius:99px}
+.hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,260px);gap:20px;align-items:center}
+@media (max-width:640px){.hero{grid-template-columns:1fr}}
+.pizza{width:100%;max-width:260px;height:auto;margin:0 auto;display:block}
+.pizza a{cursor:pointer}
+.pizza text{font-family:var(--display);font-weight:700;font-size:20px;pointer-events:none}
+.lessons{display:grid;gap:12px;margin:0;padding:0;list-style:none}
+.lesson{display:grid;grid-template-columns:56px minmax(0,1fr) auto;gap:14px;align-items:center;text-decoration:none;color:var(--ink);background:var(--card);border:2px solid var(--line);border-radius:20px;padding:14px 16px}
+.lesson:hover{border-color:var(--ink)}
+.num{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;font-family:var(--display);font-weight:700;font-size:1.5rem;background:var(--dough-soft);color:#1c2340;border:3px solid var(--dough)}
+.lesson.finished .num{background:var(--tomato);border-color:var(--tomato);color:var(--on-tomato)}
+.lesson b{font-family:var(--display);font-size:1.15rem;display:block;line-height:1.2}
+.lesson small{display:block;color:var(--muted);font-size:.95rem}
+.lesson .bar{margin-top:8px}
+.go{font-family:var(--display);font-weight:600;color:var(--muted);white-space:nowrap}
+.layers{display:flex;flex-direction:column;align-items:center;gap:6px;margin:14px 0 4px}
+.layer{border-radius:18px;padding:8px 16px;color:#1c2340;min-width:min(100%,270px);text-align:center;transition:opacity .2s}
+.layer b{font-family:var(--display);font-size:1.1rem}
+.layer span{display:block;font-size:.95rem;line-height:1.3}
+.layer.dim{opacity:.35}
+.l-toppings{background:#7fd1a8}.l-kaas{background:#ffd75e}.l-saus{background:#f08a78}.l-bodem{background:#e8c58a}
+ul,ol{padding-left:1.3em;margin:0 0 .8em} li{margin-bottom:.35em}
+.checkrow{display:flex;gap:12px;align-items:flex-start;width:100%;text-align:left;justify-content:flex-start;min-height:56px;padding:10px 16px;margin-bottom:8px;font-family:var(--body);font-weight:700;font-size:1.05rem;line-height:1.35}
+.box{flex:0 0 28px;width:28px;height:28px;border-radius:8px;border:3px solid var(--ink);display:grid;place-items:center;font-size:1rem;margin-top:1px}
+.checkrow.on .box{background:var(--basil);border-color:var(--basil);color:var(--on-basil)}
+.log{border-top:2px solid var(--line);padding-top:12px;margin-top:12px}
+.log pre{white-space:pre-wrap;word-break:break-word;font-family:var(--body);font-size:1rem;margin:6px 0;background:var(--paper);border-radius:12px;padding:10px 12px}
+.diploma{text-align:center;border:6px double var(--dough);border-radius:24px;padding:32px 20px;background:var(--card)}
+.diploma h1{font-size:2.6rem}
+.foot{margin-top:28px;display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+.foot a{color:var(--muted);font-weight:700}
+.lessonnav{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:8px}
+@media (prefers-reduced-motion: no-preference){.bar>span{transition:width .4s}}
+
+.path{width:100%;max-width:340px;height:auto;margin:0 auto;display:block}
+.path a{cursor:pointer}
+.path text{font-family:var(--display);font-weight:700;font-size:18px;pointer-events:none}
+.flabel{display:block;font-family:var(--display);font-weight:600;margin:12px 0 4px}
+.goals{list-style:none;padding:0;margin:0 0 8px}
+.goals li{display:flex;gap:10px;margin-bottom:6px;align-items:flex-start}
+.goals .gm{flex:0 0 24px;width:24px;height:24px;border-radius:50%;display:grid;place-items:center;border:2px solid var(--muted);font-size:.85rem;margin-top:2px;color:var(--muted)}
+.goals li.ok .gm{background:var(--basil);border-color:var(--basil);color:var(--on-basil)}
+.chrow{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,190px) auto;gap:8px;margin-top:10px;align-items:center}
+@media (max-width:640px){.chrow{grid-template-columns:1fr}}
+select{font-family:var(--body);font-size:18px;min-height:52px;border:2px solid var(--line);border-radius:14px;background:var(--paper);color:var(--ink);padding:0 10px;width:100%}
+.player{border-radius:24px;padding:24px 20px;margin-bottom:16px}
+.player .ptitle{font-family:var(--display);font-weight:600;opacity:.8;margin:0 0 12px}
+.player .story{font-size:1.25rem;line-height:1.6;white-space:pre-wrap}
+.player h2{margin-top:8px}
+.pc{display:block;width:100%;text-align:left;justify-content:flex-start;margin-top:10px;min-height:56px;padding:10px 18px;background:rgba(255,255,255,.14);color:inherit;border-color:currentColor;font-family:var(--body);font-weight:800;font-size:1.1rem}
+.pg{background:transparent;color:inherit;border-color:currentColor}
+.scene textarea{min-height:100px}
+
+.thumb{display:block;max-width:220px;max-height:160px;width:auto;height:auto;border-radius:12px;border:2px solid var(--line);margin:12px 0 0}
+.deckplayer{margin-bottom:16px}
+.slide{position:relative;aspect-ratio:16/9;border-radius:20px;padding:5%;display:flex;gap:4%;align-items:center;overflow:hidden}
+.slide .sl-body{flex:1 1 0;min-width:0}
+.slide .sl-title{font-size:clamp(1.3rem,5.2vw,2.8rem);margin:0 0 .4em;line-height:1.1}
+.slide .sl-text{font-size:clamp(1rem,3vw,1.6rem);line-height:1.4;white-space:pre-wrap;margin:0}
+.slide .sl-img{flex:0 0 42%;height:100%;display:flex;align-items:center;justify-content:center}
+.slide .sl-img img{max-width:100%;max-height:100%;border-radius:12px}
+.slide .sl-deck{position:absolute;left:5%;bottom:3%;font-size:.8rem;opacity:.7}
+.ctl{justify-content:space-between;margin-top:14px}
+.cnt{font-family:var(--display);font-weight:600;color:var(--muted)}
+@media (max-width:520px){.slide{aspect-ratio:auto;min-height:60vw;flex-direction:column;align-items:flex-start;padding:6%}.slide .sl-img{flex:none;height:auto;width:100%}.slide .sl-deck{position:static}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="#start"><i aria-hidden="true"></i>Mijn Presentatie</a>
+    <nav class="nav" aria-label="Menu">
+      <a class="btn small" href="#start">Kaart</a>
+      <a class="btn small" href="#speeltuin">Speeltuin</a>
+      <a class="btn small" href="#logboek">Mijn logboek</a>
+    </nav>
+  </header>
+  <main id="app"><noscript><section class="card"><h2>Open Mijn Presentatie in Safari</h2><p>Deze cursus werkt niet in een voorbeeldvenster van Mail of Bestanden, want daar draaien de opdrachten niet. Open de link in Safari.</p></section></noscript></main>
+  <div class="foot" id="foot">
+    <a href="#spelregels">Spelregels</a>
+    <a href="#ouders">Voor ouders</a>
+  </div>
+</div>
+<script>
+(function(){
+"use strict";
+var KEY="presentatie-v1";
+
+/* ---------- state ---------- */
+function newDeck(){return {title:"",theme:"zee",themeSet:false,slides:[{title:"",text:"",img:""}]};}
+function defaults(){return {name:"",rules:false,done:{},drafts:{},manual:{},log:[],ans:{},checks:{},deck:newDeck()};}
+var S=load();
+function load(){try{var r=localStorage.getItem(KEY);if(r){var o=JSON.parse(r);var d=defaults();for(var k in d){if(o[k]!==undefined)d[k]=o[k];}if(!d.deck||!d.deck.slides||!d.deck.slides.length)d.deck=newDeck();return d;}}catch(e){}return defaults();}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S));return true;}catch(e){return false;}}
+
+/* ---------- content ---------- */
+var LAYERS={
+ bodem:{n:"Bodem",d:"De opdracht",q:"Wat moet ChatGPT doen?",hint:"Zeg wat ChatGPT moet doen, bijvoorbeeld bedenk, schrijf of maak."},
+ saus:{n:"Saus",d:"De context",q:"Wie ben ik, voor wie is het en waarom?",hint:"Vertel wie je bent en waarvoor het is, bijvoorbeeld: Ik ben 10 en maak een presentatie."},
+ kaas:{n:"Kaas",d:"Een voorbeeld",q:"Hoe moet het ongeveer worden?",hint:"Geef een voorbeeld met het woord zoals of bijvoorbeeld, of beschrijf de stijl."},
+ toppings:{n:"Toppings",d:"De regels",q:"Hoeveel, hoe lang, welke toon, wat niet?",hint:"Voeg regels toe: hoeveel zinnen of dia's, hoe kort, of wat niet."}
+};
+var THEMES={zee:["Zee","#0c3b5c","#e6f6ff"],bos:["Bos","#1f4d3a","#f2ffe9"],zon:["Zon","#ffd75e","#1c2340"],nacht:["Nacht","#14143a","#e8e8ff"]};
+var RULES=[
+ ["Geen geheimen delen","Typ nooit je achternaam, adres, school, telefoonnummer of foto's van mensen. Zet ze ook niet in je presentatie."],
+ ["AI kan fout zitten","Check belangrijke dingen op een tweede plek, zoals in een boek of bij een volwassene."],
+ ["Eerst zelf denken","Bedenk eerst wat jij zelf denkt en vraag het dan pas."],
+ ["Eerlijk blijven","Zeg erbij als ChatGPT je heeft geholpen met tekst of plaatjes. De keuzes en het verhaal zijn van jou."],
+ ["Vriendelijk blijven","Maak geen gemene of verzonnen plaatjes of verhalen over echte mensen."],
+ ["Raar of eng antwoord?","Stop en haal meteen een volwassene. Dat is slim, niet stout."]
+];
+
+var LESSONS=[
+{id:1,title:"Onderwerp en publiek",sub:"Kies iets dat je zelf leuk vindt",steps:[
+ {t:"text",h:"Begin met twee vragen",p:["Voor wie is je presentatie? En wat moeten zij daarna onthouden? Een goede presentatie gaat over één ding, niet over alles.","Kies daarom een klein onderwerp. Niet Dieren, maar Hoe een uil in het donker jaagt."]},
+ {t:"quiz",id:"q1",q:"Welk onderwerp is het best voor een korte presentatie?",opts:["Alles over dieren","Hoe een uil in het donker jaagt","Dieren"],ok:1,why:"Een klein, scherp onderwerp past in een paar dia's en blijft interessant."},
+ {t:"form",id:"f1",title:"Mijn presentatie in vier regels",task:"Vul in waar je presentatie over gaat.",fields:[{l:"Onderwerp",ph:"Waar gaat het over?"},{l:"Voor wie",ph:"Wie kijkt en luistert?"},{l:"Dit moeten ze onthouden",ph:"Eén ding"},{l:"Zo laat ik het zien",ph:"Plaatjes, tekst, een vraag?"}]},
+ {t:"prompt",id:"p1",title:"Eerst zelf leren",task:"Laat ChatGPT je eerst vragen stellen, zodat je ontdekt wat je al weet. Vervang [onderwerp] door jouw onderwerp. Zoek in het menu van ChatGPT of je een optie als Study and learn hebt. Die helpt bij leren, maar je prompt werkt ook zonder.",start:"Ik ben 10 en wil een presentatie maken over [onderwerp]. Stel me eerst één voor één vragen om te kijken wat ik al weet. Leg daarna elk antwoord uit in maximaal 4 zinnen.",need:["bodem","saus","toppings"],min:60,forbid:["[","]"],forbidMsg:"Vervang [onderwerp] door je eigen onderwerp."},
+ {t:"reflect",id:"r1",q:"Wat heb je geleerd wat je nog niet wist?",choices:[],ask:"Schrijf het op in een of twee zinnen."},
+ {t:"offline",id:"o1",title:"Vertel het in één minuut",text:"Vertel aan een ouder, broer of zus in één minuut waar je presentatie over gaat en waarom jij het leuk vindt. Zonder iets af te lezen."}
+]},
+{id:2,title:"Het verhaal bouwen",sub:"Begin, midden en eind",steps:[
+ {t:"text",h:"Een presentatie is een verhaal",p:["Elke goede presentatie heeft een begin, een midden en een eind. Begin met een vraag of iets verrassends.","Maak maximaal 6 dia's. Op elke dia staat één idee."],list:["Begin: haak de kijker met een vraag.","Midden: laat drie dingen zien of uitleggen.","Eind: wat moeten ze onthouden?"]},
+ {t:"quiz",id:"q1",q:"Hoeveel ideeën staan er op één dia?",opts:["Zo veel mogelijk","Eén","Tien"],ok:1,why:"Eén idee per dia is makkelijk te volgen."},
+ {t:"prompt",id:"p1",title:"Een plan laten maken",task:"Laat ChatGPT een plan maken. Vervang alles tussen de haken.",start:"Ik ben 10 en maak een presentatie van 6 dia's over [onderwerp] voor [publiek]. Maak een plan met per dia een titel en maximaal 2 korte zinnen. Begin met een verrassende vraag.",need:["bodem","saus","toppings"],min:60,forbid:["[","]"],forbidMsg:"Vervang alles tussen [ ] door je eigen woorden."},
+ {t:"prompt",id:"p2",title:"Maak het korter",task:"Het plan heeft vaak te veel tekst. Vraag ChatGPT om het korter te maken, bijvoorbeeld: maximaal 10 woorden per dia.",need:[],min:15},
+ {t:"deckgoal",id:"g1",title:"Je dia's in de speeltuin",task:"Zet je plan in de speeltuin: een dia voor elk stuk van je verhaal. Schrijf een titel op elke dia.",minSlides:5,needAllTitle:true}
+]},
+{id:3,title:"Plaatjes",sub:"Laat zien in plaats van vertellen",steps:[
+ {t:"text",h:"Een plaatje legt iets uit",p:["Een goed plaatje laat zien wat je bedoelt, zonder dat je veel hoeft te zeggen. Je kunt er een tekenen, fotograferen of door ChatGPT laten maken.","Voor plaatjes gebruik je de Prompt-Pizza weer: wat moet er te zien zijn, in welke stijl, en wat moet er niet op?"],layers:["bodem","kaas","toppings"],tip:"Maak geen plaatjes van echte mensen of van jezelf. Bewaar een plaatje op je iPad en kies het daarna in de speeltuin."},
+ {t:"quiz",id:"q1",q:"Welk plaatje past het best bij de dia Hoe een uil jaagt?",opts:["Een uil die in het donker op een tak naar een muis kijkt","Een willekeurig plaatje van een kat","Een plaatje met heel veel tekst"],ok:0,why:"Het plaatje laat precies het idee van de dia zien."},
+ {t:"prompt",id:"p1",title:"Een plaatje laten maken",task:"Vervang de woorden tussen de haken. Vraag in ChatGPT om een plaatje, en bewaar het op je iPad.",start:"Maak een plaatje voor mijn dia over [onderwerp]. Het moet [wat er te zien is] laten zien, in de stijl van een kleurrijke tekening, zonder tekst en zonder echte mensen.",need:["bodem","kaas","toppings"],min:60,forbid:["[","]"],forbidMsg:"Vervang alles tussen [ ] door je eigen woorden."},
+ {t:"prompt",id:"p2",title:"Verbeter je plaatje",task:"Is het plaatje nog niet goed? Vraag om een verandering, bijvoorbeeld andere kleuren, een andere hoek of minder dingen op het plaatje.",need:[],min:15},
+ {t:"offline",id:"o1",title:"Teken er zelf een",text:"Teken op papier het plaatje voor een van je dia's. Maak er een foto van en gebruik die in de speeltuin. Dat is helemaal van jou."},
+ {t:"deckgoal",id:"g1",title:"Plaatjes in je dia's",task:"Kies in de speeltuin plaatjes voor je dia's.",minImages:3}
+]},
+{id:4,title:"Dia's maken",sub:"Kort, groot en duidelijk",steps:[
+ {t:"text",h:"Weinig woorden, groot beeld",p:["Op een dia staat een korte titel en een paar woorden. Jij vertelt de rest. Als je alles op de dia zet, gaat iedereen lezen in plaats van luisteren."],list:["Maximaal ongeveer 20 woorden per dia.","Een titel die zegt waar de dia over gaat.","Een plaatje dat het idee laat zien.","Niet te veel kleuren: kies een thema."]},
+ {t:"quiz",id:"q1",q:"Wat past op een dia?",opts:["Een hele alinea","Een korte titel, een paar woorden en een plaatje","Alles wat je weet"],ok:1,why:"Houd de dia kort. Jij vertelt de rest."},
+ {t:"deckgoal",id:"g1",title:"Je presentatie af",task:"Maak je presentatie compleet in de speeltuin: een titel voor je presentatie, een thema, minstens 6 dia's met titel en tekst, en minstens 3 plaatjes.",minSlides:6,needAllTitle:true,needAllText:true,minImages:3,needTitle:true,needTheme:true},
+ {t:"reflect",id:"r1",q:"Welke dia vind je het mooist?",choices:[],ask:"Schrijf op waarom."}
+]},
+{id:5,title:"Oefenen en presenteren",sub:"Laat zien wat je gemaakt hebt",steps:[
+ {t:"text",h:"Oefenen maakt het makkelijk",p:["Oefen hardop, niet in je hoofd. Praat rustig, kijk naar je publiek en lees niet alleen voor van de dia.","Je kunt oefenen met ChatGPT als publiek. Als je een spraakfunctie hebt, praat je gewoon tegen hem. Anders typ je je presentatie in stukken."]},
+ {t:"prompt",id:"p1",title:"Oefenen met een publiek",task:"Vervang [onderwerp] door jouw onderwerp. ChatGPT speelt het publiek en stelt vragen na afloop.",start:"Ik ga mijn presentatie over [onderwerp] oefenen. Doe alsof je een nieuwsgierig publiek van kinderen bent. Stel na mijn presentatie 3 vragen, één voor één.",need:["bodem","toppings"],min:60,forbid:["[","]"],forbidMsg:"Vervang [onderwerp] door je eigen onderwerp."},
+ {t:"offline",id:"o1",title:"Generale repetitie",text:"Presenteer voor één persoon vanaf je iPad in de speeltuin. Neem de tijd op. Blijf onder de 3 minuten. Wat ging goed en wat kan beter?"},
+ {t:"check",id:"k1",title:"Mijn voorbereiding",items:["Ik heb hardop geoefend.","Ik kijk naar mijn publiek en lees niet alleen voor.","Ik kan antwoord geven op de drie vragen van mijn oefenpubliek.","Ik heb gepresenteerd aan de familie."]},
+ {t:"reflect",id:"r1",q:"Waar ben je het meest trots op?",choices:[],ask:"Schrijf het op in een of twee zinnen."}
+]}
+];
+
+/* ---------- helpers ---------- */
+var STEPS={};
+LESSONS.forEach(function(L){L.steps.forEach(function(s){if(s.id){STEPS[L.id+"-"+s.id]={L:L,s:s};}});});
+function esc(t){return String(t).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c];});}
+function $(id){return document.getElementById(id);}
+var RX={
+ bodem:/\b(bedenk|bedenken|schrijf|schrijven|maak|maken|leg|geef|vertel|teken|verzin|help|noem|vergelijk|stel|laat|bouw|plan|ontwerp|kun je|kan je|oefenen|oefen)\b/,
+ saus:/\b(ik ben|ik zit|ik heb|ik wil|ik vind|ik ga|alsof ik|mijn|voor mij|voor een|voor de|omdat|zodat)\b/,
+ kaas:/(bijvoorbeeld|zoals|voorbeeld|zo'n|zo een|net als|in de stijl|stijl van)/,
+ toppings:/(\d|\bkort|\blang|grappig|spannend|makkelijk|simpel|eenvoudig|woorden|zinnen|regels|\bniet\b|\bgeen\b|maximaal|minimaal|alinea|stappen|rijm|onder|zonder|dia's)/
+};
+function detect(t){t=(t||"").toLowerCase();return {bodem:RX.bodem.test(t),saus:RX.saus.test(t),kaas:RX.kaas.test(t),toppings:RX.toppings.test(t)};}
+function eff(key,layer,auto){var m=S.manual[key];return (m&&m[layer]!==undefined)?m[layer]:auto[layer];}
+function draftOf(key){var e=STEPS[key];if(S.drafts[key]!==undefined)return S.drafts[key];return e.s.start||"";}
+
+function stats(){
+ var d=S.deck,sl=d.slides,t=0,x=0,im=0;
+ sl.forEach(function(s){if((s.title||"").trim().length>=2)t++;if((s.text||"").trim().length>=10)x++;if(s.img)im++;});
+ return {slides:sl.length,titled:t,texted:x,imgs:im,title:(d.title||"").trim().length>=2,theme:!!d.themeSet};
+}
+function reqs(g){
+ var s=stats(),r=[];
+ if(g.minSlides)r.push({ok:s.slides>=g.minSlides,label:"Minstens "+g.minSlides+" dia's (nu "+s.slides+")"});
+ if(g.needAllTitle)r.push({ok:s.titled===s.slides,label:"Elke dia heeft een titel ("+s.titled+" van "+s.slides+")"});
+ if(g.needAllText)r.push({ok:s.texted===s.slides,label:"Elke dia heeft een paar woorden tekst ("+s.texted+" van "+s.slides+")"});
+ if(g.minImages)r.push({ok:s.imgs>=g.minImages,label:"Minstens "+g.minImages+" dia's met een plaatje (nu "+s.imgs+")"});
+ if(g.needTitle)r.push({ok:s.title,label:"Je presentatie heeft een titel"});
+ if(g.needTheme)r.push({ok:s.theme,label:"Je hebt een thema gekozen"});
+ return r;
+}
+function stepDone(key){var e=STEPS[key];if(e&&e.s.t==="deckgoal")return reqs(e.s).every(function(x){return x.ok;});return !!S.done[key];}
+function progress(L){var t=0,d=0;L.steps.forEach(function(s){if(s.id){t++;if(stepDone(L.id+"-"+s.id))d++;}});return {t:t,d:d};}
+function lessonFinished(L){var p=progress(L);return p.d===p.t;}
+function allFinished(){return LESSONS.every(lessonFinished);}
+function pct(L){var p=progress(L);return Math.round(100*p.d/p.t);}
+var N=LESSONS.length;
+
+/* ---------- views ---------- */
+function layersHTML(hl){
+ var order=["toppings","kaas","saus","bodem"];var widths={toppings:"68%",kaas:"80%",saus:"90%",bodem:"100%"};
+ return "<div class=\"layers\" role=\"list\">"+order.map(function(k){
+  var L=LAYERS[k];var dim=hl&&hl.indexOf(k)<0?" dim":"";
+  return "<div class=\"layer l-"+k+dim+"\" role=\"listitem\" style=\"width:"+widths[k]+"\"><b>"+L.n+": "+L.d+"</b><span>"+L.q+"</span></div>";
+ }).join("")+"</div>";
+}
+function pathSVG(){
+ var out="<svg class=\"path\" viewBox=\"0 0 300 130\" role=\"img\" aria-label=\"Pad met "+N+" stops, een per les\">";
+ var pts=LESSONS.map(function(L,i){return [34+i*58,i%2===0?88:42];});
+ out+="<polyline points=\""+pts.map(function(p){return p.join(",");}).join(" ")+"\" fill=\"none\" stroke=\"var(--dough)\" stroke-width=\"6\" stroke-dasharray=\"2 10\" stroke-linecap=\"round\"/>";
+ LESSONS.forEach(function(L,i){
+  var p=pts[i],fin=lessonFinished(L);
+  out+="<a href=\"#les-"+L.id+"\" aria-label=\"Les "+L.id+": "+L.title+(fin?" (klaar)":"")+"\"><circle cx=\""+p[0]+"\" cy=\""+p[1]+"\" r=\"18\" fill=\""+(fin?"var(--tomato)":"var(--dough-soft)")+"\" stroke=\""+(fin?"var(--tomato)":"var(--dough)")+"\" stroke-width=\"3\"/><text x=\""+p[0]+"\" y=\""+(p[1]+7)+"\" text-anchor=\"middle\" fill=\""+(fin?"var(--on-tomato)":"#1c2340")+"\">"+L.id+"</text></a>";
+ });
+ var last=pts[pts.length-1];
+ out+="<path d=\"M"+(last[0]+24)+" "+(last[1]-6)+" L"+(last[0]+24)+" "+(last[1]-34)+" L"+(last[0]+42)+" "+(last[1]-27)+" L"+(last[0]+24)+" "+(last[1]-20)+"\" fill=\"var(--sun)\" stroke=\"var(--ink)\" stroke-width=\"2\" stroke-linejoin=\"round\"/>";
+ return out+"</svg>";
+}
+function rulesHTML(){return "<ol>"+RULES.map(function(r){return "<li><b>"+r[0]+".</b> "+r[1]+"</li>";}).join("")+"</ol>";}
+function onboarding(){
+ return "<section class=\"card\"><h1>Welkom bij Mijn Presentatie</h1><p>In "+N+" lessen maak je je eigen presentatie over iets wat jij leuk vindt. ChatGPT helpt je met leren en plaatjes, maar jij bent de maker. Je maakt en speelt je dia's in de speeltuin.</p>"+
+ "<h2>Hoe heet je?</h2><input type=\"text\" id=\"nm\" autocomplete=\"off\" maxlength=\"24\" placeholder=\"Jouw voornaam\" aria-label=\"Jouw voornaam\" value=\""+esc(S.name)+"\">"+
+ "<h2 style=\"margin-top:24px\">De 6 spelregels</h2>"+rulesHTML()+
+ "<p>Gebruik ChatGPT alleen als een volwassene in de buurt is.</p>"+
+ "<button class=\"checkrow\" data-act=\"agree\" id=\"agree\" aria-pressed=\"false\"><span class=\"box\"></span><span>Ik heb de spelregels gelezen en beloof ze te volgen.</span></button>"+
+ "<p class=\"status\" id=\"obst\" role=\"status\"></p><button class=\"primary\" data-act=\"start\">Aan de slag</button></section>";
+}
+function homeView(){
+ var fin=LESSONS.filter(lessonFinished).length;
+ var h="<section class=\"card hero\"><div><h1>Hoi "+esc(S.name||"")+"!</h1><p>Elke les brengt je een stap verder. Aan het eind heb je een eigen presentatie gemaakt en laten zien.</p><p><b>"+fin+" van "+N+" lessen klaar.</b></p><div class=\"row\">";
+ if(allFinished())h+="<a class=\"btn primary\" href=\"#diploma\">Bekijk je diploma</a>";
+ else{var next=LESSONS.filter(function(L){return !lessonFinished(L);})[0];h+="<a class=\"btn primary\" href=\"#les-"+next.id+"\">"+(fin?"Ga verder met les "+next.id:"Start les 1")+"</a>";}
+ h+="<a class=\"btn\" href=\"#speeltuin\">Open de speeltuin</a></div></div><div>"+pathSVG()+"</div></section>";
+ h+="<h2>Alle lessen</h2><ul class=\"lessons\">"+LESSONS.map(function(L){
+  var p=progress(L),f=lessonFinished(L);
+  return "<li><a class=\"lesson"+(f?" finished":"")+"\" href=\"#les-"+L.id+"\"><span class=\"num\">"+L.id+"</span><span><b>"+L.title+"</b><small>"+L.sub+"</small><div class=\"bar\" aria-hidden=\"true\"><span style=\"width:"+pct(L)+"%\"></span></div></span><span class=\"go\">"+(f?"Klaar":p.d+"/"+p.t)+"</span></a></li>";
+ }).join("")+"</ul>";
+ return h;
+}
+function tagFor(t){return {quiz:["denk","Weet je het?"],prompt:["probeer","Probeer"],offline:["samen","Doe het samen"],reflect:["denk","Denk na"],check:["denk","Check"],form:["denk","Schrijf op"],deckgoal:["samen","Bouwen"]}[t];}
+function badge(key){return stepDone(key)?"<span class=\"done-badge\">Klaar</span>":"";}
+function chipsHTML(key){
+ var s=STEPS[key].s;if(!s.need||!s.need.length)return "";
+ var auto=detect(draftOf(key));
+ return ["bodem","saus","kaas","toppings"].map(function(l){
+  var on=eff(key,l,auto),needed=s.need.indexOf(l)>=0;
+  return "<button class=\"chip"+(needed?" needed":"")+(on?" on":"")+"\" data-act=\"layer\" data-key=\""+key+"\" data-layer=\""+l+"\" aria-pressed=\""+on+"\">"+(on?"✓ ":"")+LAYERS[l].n+(needed?" (nodig)":"")+"</button>";
+ }).join("");
+}
+function stepHTML(L,s){
+ var key=L.id+"-"+s.id,tg=s.t==="text"?null:tagFor(s.t),h="";
+ if(s.t==="text"){
+  h+="<section class=\"card\"><span class=\"tag ontdek\">Ontdek</span><h2>"+s.h+"</h2>"+(s.p||[]).map(function(p){return "<p>"+p+"</p>";}).join("");
+  if(s.list)h+="<ul>"+s.list.map(function(i){return "<li>"+i+"</li>";}).join("")+"</ul>";
+  if(s.layers)h+=layersHTML(s.layers);
+  if(s.tip)h+="<div class=\"tip\"><b>Tip.</b> "+s.tip+"</div>";
+  return h+"</section>";
+ }
+ h+="<section class=\"card\" id=\"s-"+key+"\"><span class=\"tag "+tg[0]+"\">"+tg[1]+"</span>"+badge(key);
+ if(s.t==="quiz"){
+  h+="<h3>"+s.q+"</h3>"+s.opts.map(function(o,i){
+   var cls="opt"+(stepDone(key)&&i===s.ok?" right":"");
+   return "<button class=\""+cls+"\" data-act=\"quiz\" data-key=\""+key+"\" data-i=\""+i+"\">"+o+"</button>";
+  }).join("")+"<p class=\"fb\" id=\"fb-"+key+"\" role=\"status\">"+(stepDone(key)?"Goed! "+s.why:"")+"</p>";
+ }else if(s.t==="prompt"){
+  h+="<h3>"+s.title+"</h3><p>"+s.task+"</p>"+
+   "<textarea id=\"ta-"+key+"\" data-key=\""+key+"\" rows=\"5\" placeholder=\"Schrijf hier je prompt\" aria-label=\"Jouw prompt\">"+esc(draftOf(key))+"</textarea>"+
+   "<div class=\"chips\" id=\"chips-"+key+"\">"+chipsHTML(key)+"</div>"+
+   (s.need&&s.need.length?"<p class=\"hintline\">De robot zoekt de lagen in je tekst, maar hij kan zich vergissen. Tik op een laag om hem zelf aan of uit te zetten.</p>":"")+
+   "<div class=\"row\"><button data-act=\"copy\" data-key=\""+key+"\">Kopieer prompt</button><a class=\"btn ghost\" href=\"https://chatgpt.com\" target=\"_blank\" rel=\"noopener\">Open ChatGPT</a><button class=\"primary\" data-act=\"savep\" data-key=\""+key+"\">Bewaar in logboek</button></div>"+
+   "<p class=\"status\" id=\"st-"+key+"\" role=\"status\"></p>";
+ }else if(s.t==="offline"){
+  h+="<h3>"+s.title+"</h3><p>"+s.text+"</p><button class=\"checkrow"+(stepDone(key)?" on":"")+"\" data-act=\"off\" data-key=\""+key+"\" aria-pressed=\""+stepDone(key)+"\"><span class=\"box\">"+(stepDone(key)?"✓":"")+"</span><span>Dit hebben we gedaan</span></button>";
+ }else if(s.t==="reflect"){
+  var a=S.ans[key]||{c:null,t:""};
+  h+="<h3>"+s.q+"</h3>"+(s.choices||[]).map(function(c,i){return "<button class=\"opt"+(a.c===i?" sel":"")+"\" data-act=\"rc\" data-key=\""+key+"\" data-i=\""+i+"\" aria-pressed=\""+(a.c===i)+"\">"+c+"</button>";}).join("")+
+   "<p>"+s.ask+"</p><textarea data-rkey=\""+key+"\" rows=\"3\" aria-label=\"Jouw antwoord\">"+esc(a.t||"")+"</textarea>"+
+   "<div class=\"row\"><button class=\"primary\" data-act=\"rsave\" data-key=\""+key+"\">Opslaan</button></div><p class=\"status\" id=\"st-"+key+"\" role=\"status\"></p>";
+ }else if(s.t==="check"){
+  var cs=S.checks[key]||[];
+  h+="<h3>"+s.title+"</h3>"+s.items.map(function(it,i){return "<button class=\"checkrow"+(cs[i]?" on":"")+"\" data-act=\"chk\" data-key=\""+key+"\" data-i=\""+i+"\" aria-pressed=\""+!!cs[i]+"\"><span class=\"box\">"+(cs[i]?"✓":"")+"</span><span>"+it+"</span></button>";}).join("");
+ }else if(s.t==="form"){
+  var fa=S.ans[key];if(!Array.isArray(fa))fa=[];
+  h+="<h3>"+s.title+"</h3><p>"+s.task+"</p>"+s.fields.map(function(f,i){return "<label class=\"flabel\" for=\"f-"+key+"-"+i+"\">"+f.l+"</label><input type=\"text\" id=\"f-"+key+"-"+i+"\" data-fkey=\""+key+"\" data-fi=\""+i+"\" maxlength=\"140\" placeholder=\""+f.ph+"\" value=\""+esc(fa[i]||"")+"\">";}).join("")+
+   "<div class=\"row\"><button class=\"primary\" data-act=\"fsave\" data-key=\""+key+"\">Opslaan</button></div><p class=\"status\" id=\"st-"+key+"\" role=\"status\"></p>";
+ }else if(s.t==="deckgoal"){
+  h+="<h3>"+s.title+"</h3><p>"+s.task+"</p><ul class=\"goals\">"+reqs(s).map(function(r){return "<li class=\""+(r.ok?"ok":"")+"\"><span class=\"gm\" aria-hidden=\"true\">"+(r.ok?"✓":"○")+"</span> "+r.label+"</li>";}).join("")+"</ul><div class=\"row\"><a class=\"btn primary\" href=\"#speeltuin\">Open de speeltuin</a></div>";
+ }
+ return h+"</section>";
+}
+function lessonView(n){
+ var L=LESSONS[n-1];if(!L)return homeView();
+ var h="<section class=\"card\"><p style=\"margin:0;color:var(--muted);font-weight:700\">Les "+L.id+" van "+N+"</p><h1>"+L.title+"</h1><p>"+L.sub+"</p><div class=\"bar\" aria-hidden=\"true\"><span style=\"width:"+pct(L)+"%\"></span></div><p class=\"hintline\">"+progress(L).d+" van "+progress(L).t+" opdrachten klaar</p></section>";
+ h+=L.steps.map(function(s){return stepHTML(L,s);}).join("");
+ if(lessonFinished(L))h+="<section class=\"card good\"><h2>Les "+L.id+" is klaar!</h2><p>Je bent weer een stap verder.</p></section>";
+ h+="<div class=\"lessonnav\">"+(n>1?"<a class=\"btn\" href=\"#les-"+(n-1)+"\">Vorige les</a>":"<span></span>")+
+   (n<N?"<a class=\"btn primary\" href=\"#les-"+(n+1)+"\">Volgende les</a>":"<a class=\"btn primary\" href=\"#start\">Naar de kaart</a>")+"</div>";
+ return h;
+}
+
+/* ---------- speeltuin ---------- */
+var play=null;
+function deckView(){
+ if(play)return playView();
+ var d=S.deck;
+ var h="<section class=\"card\"><h1>Speeltuin</h1><p>Maak hier je dia's. Elke dia heeft een titel, een paar woorden en eventueel een plaatje. Tik op Presenteer om ze groot af te spelen. Alles wordt vanzelf bewaard op deze iPad.</p>"+
+  "<label class=\"flabel\" for=\"dtt\">Titel van je presentatie</label><input type=\"text\" id=\"dtt\" maxlength=\"60\" placeholder=\"Bijvoorbeeld: Hoe een uil jaagt\" value=\""+esc(d.title)+"\">"+
+  "<p class=\"flabel\" style=\"margin-top:14px\">Thema</p><div class=\"chips\" style=\"margin:0 0 14px\">"+Object.keys(THEMES).map(function(k){var on=d.themeSet&&d.theme===k;return "<button class=\"chip needed"+(on?" on":"")+"\" data-act=\"theme\" data-k=\""+k+"\" aria-pressed=\""+on+"\">"+(on?"✓ ":"")+THEMES[k][0]+"</button>";}).join("")+"</div>"+
+  "<div class=\"row\"><button class=\"primary\" data-act=\"play\">Presenteer</button></div></section>";
+ d.slides.forEach(function(sl,i){
+  h+="<section class=\"card scene\"><h3>Dia "+(i+1)+"</h3>"+
+   "<label class=\"flabel\" for=\"sti-"+i+"\">Titel</label><input type=\"text\" id=\"sti-"+i+"\" data-dt=\""+i+"\" maxlength=\"60\" placeholder=\"Korte titel\" value=\""+esc(sl.title||"")+"\">"+
+   "<label class=\"flabel\" for=\"stx-"+i+"\">Tekst (kort!)</label><textarea id=\"stx-"+i+"\" data-dx=\""+i+"\" rows=\"3\" maxlength=\"300\" placeholder=\"Een paar woorden, geen hele verhaal\">"+esc(sl.text||"")+"</textarea>";
+  if(sl.img)h+="<img class=\"thumb\" alt=\"Plaatje bij dia "+(i+1)+"\" src=\""+sl.img+"\">";
+  h+="<div class=\"row\"><label class=\"btn small\">"+(sl.img?"Ander plaatje":"Plaatje kiezen")+"<input type=\"file\" accept=\"image/*\" data-img=\""+i+"\" hidden></label>"+(sl.img?"<button class=\"small ghost\" data-act=\"imgdel\" data-i=\""+i+"\">Plaatje weg</button>":"")+"</div><p class=\"status\" id=\"im-"+i+"\" role=\"status\"></p>"+
+   "<div class=\"row\">"+(i>0?"<button class=\"small\" data-act=\"up\" data-i=\""+i+"\">Omhoog</button>":"")+(i<d.slides.length-1?"<button class=\"small\" data-act=\"down\" data-i=\""+i+"\">Omlaag</button>":"")+(d.slides.length>1?"<button class=\"small ghost\" data-act=\"sdel\" data-i=\""+i+"\">Dia verwijderen</button>":"")+"</div></section>";
+ });
+ h+="<div class=\"row\" style=\"margin:0 0 16px\"><button class=\"primary\" data-act=\"sadd\">Nieuwe dia</button></div>";
+ return h;
+}
+function playView(){
+ var d=S.deck,t=THEMES[d.theme]||THEMES.zee,n=d.slides.length,sl=d.slides[play.at];
+ var h="<section class=\"deckplayer\"><div class=\"slide\" style=\"background:"+t[1]+";color:"+t[2]+"\"><div class=\"sl-body\"><h2 class=\"sl-title\">"+(sl.title.trim()?esc(sl.title):"Geen titel")+"</h2>"+(sl.text.trim()?"<p class=\"sl-text\">"+esc(sl.text)+"</p>":"")+"</div>"+(sl.img?"<div class=\"sl-img\"><img alt=\"\" src=\""+sl.img+"\"></div>":"")+(d.title.trim()?"<span class=\"sl-deck\">"+esc(d.title)+"</span>":"")+"</div>"+
+  "<div class=\"row ctl\">"+(play.at>0?"<button data-act=\"pprev\">Vorige</button>":"<span></span>")+"<span class=\"cnt\">Dia "+(play.at+1)+" van "+n+"</span>"+(play.at<n-1?"<button class=\"primary\" data-act=\"pnext\">Volgende</button>":"<button class=\"primary\" data-act=\"play\">Opnieuw</button>")+"</div>"+
+  "<div class=\"row\" style=\"justify-content:center\"><button class=\"small ghost\" data-act=\"pstop\">Terug naar bouwen</button></div></section>";
+ return h;
+}
+function processImage(file,i){
+ var st=function(m){say("im-"+i,m);};
+ if(!file||!/^image\//.test(file.type)){st("Kies een plaatje (een foto of een afbeelding).");return;}
+ st("Plaatje wordt klaargemaakt...");
+ var fr=new FileReader();
+ fr.onerror=function(){st("Dit plaatje kon niet worden gelezen. Probeer een ander plaatje.");};
+ fr.onload=function(){
+  var im=new Image();
+  im.onerror=function(){st("Dit plaatje kon niet worden geopend. Probeer een ander plaatje.");};
+  im.onload=function(){
+   var max=800,w=im.width,h=im.height,sc=Math.min(1,max/Math.max(w,h));w=Math.max(1,Math.round(w*sc));h=Math.max(1,Math.round(h*sc));
+   var c=document.createElement("canvas");c.width=w;c.height=h;var ctx=c.getContext("2d");ctx.fillStyle="#fff";ctx.fillRect(0,0,w,h);ctx.drawImage(im,0,0,w,h);
+   var url=c.toDataURL("image/jpeg",0.7),old=S.deck.slides[i].img;
+   S.deck.slides[i].img=url;
+   if(!save()){S.deck.slides[i].img=old;st("Er is geen ruimte meer op deze iPad voor nog een plaatje. Haal eerst een plaatje weg bij een andere dia.");return;}
+   render(true);
+  };
+  im.src=fr.result;
+ };
+ fr.readAsDataURL(file);
+}
+
+/* ---------- other views ---------- */
+function logView(){
+ var h="<section class=\"card\"><h1>Mijn logboek</h1><p>Hier staan al je bewaarde prompts. Kijk wat het best werkte en gebruik het weer.</p></section>";
+ if(!S.log.length)return h+"<section class=\"card\"><p>Je hebt nog geen prompts bewaard. Maak een prompt in een les en tik op Bewaar in logboek.</p></section>";
+ var list=S.log.slice().sort(function(a,b){return a.d<b.d?1:-1;});
+ return h+"<section class=\"card\">"+list.map(function(e){
+  return "<div class=\"log\"><b>Les "+e.lesson+": "+esc(e.title)+"</b><pre>"+esc(e.text)+"</pre><button class=\"small\" data-act=\"copylog\" data-key=\""+esc(e.key)+"\">Kopieer</button></div>";
+ }).join("")+"<p class=\"status\" id=\"logst\" role=\"status\"></p></section>";
+}
+function rulesView(){return "<section class=\"card\"><h1>De 6 spelregels</h1>"+rulesHTML()+"<p>Gebruik ChatGPT alleen als een volwassene in de buurt is.</p></section>";}
+function parentsView(){
+ return "<section class=\"card\"><h1>Voor ouders</h1>"+
+ "<h3>Zo werkt het</h3><p>Mijn Presentatie is het derde deel van de AI-cursus. In 5 lessen van 45 tot 60 minuten kiezen de kinderen een onderwerp, leren ze er met ChatGPT over, bouwen ze een verhaal, maken ze plaatjes en dia's in de speeltuin en presenteren ze aan de familie.</p>"+
+ "<h3>De pizza-robot</h3><p>Onder elke prompt zoekt een eenvoudig programma naar de lagen van de Prompt-Pizza. Het kijkt alleen naar bepaalde woorden en kan zich vergissen. Het kind kan elke laag zelf aan of uit zetten.</p>"+
+ "<h3>Plaatjes</h3><p>Plaatjes kiezen de kinderen uit de foto's of bestanden op de iPad. Ze worden kleiner gemaakt en alleen op dit apparaat bewaard. Kijk samen of ze geen foto's van echte mensen gebruiken.</p>"+
+ "<h3>ChatGPT en leeftijd</h3><p>OpenAI zegt dat ChatGPT niet bedoeld is voor kinderen onder 13, en ouderlijk toezicht is er alleen voor gekoppelde tienerrekeningen vanaf 13. Zit er daarom bij en lees de actuele voorwaarden. Hoe jullie hiermee omgaan is jouw keuze.</p>"+
+ "<h3>Voortgang</h3><p>Voortgang, logboek en dia's staan alleen op dit apparaat, in deze browser. Wis je de browsergegevens, dan zijn ze weg.</p>"+
+ "<div id=\"resetbox\"><button data-act=\"reset1\">Alles wissen</button></div></section>";
+}
+function diplomaView(){
+ if(!allFinished())return "<section class=\"card\"><h2>Nog niet klaar</h2><p>Maak eerst alle "+N+" lessen af.</p><a class=\"btn primary\" href=\"#start\">Naar de kaart</a></section>";
+ var d=new Date().toLocaleDateString("nl-NL",{day:"numeric",month:"long",year:"numeric"});
+ return "<section class=\"diploma\"><p style=\"font-weight:700;color:var(--muted)\">Dit diploma is voor</p><h1>"+esc(S.name)+"</h1><h2>Presentator</h2>"+
+ "<p>Je hebt een onderwerp gekozen, er met ChatGPT over geleerd, een verhaal gebouwd, plaatjes gemaakt, dia's gemaakt en je presentatie laten zien.</p>"+
+ "<p><b>"+esc(S.deck.title||"")+"</b></p><p><b>"+d+"</b></p><p style=\"color:var(--muted)\">Maak een schermafbeelding om dit diploma te bewaren.</p></section>"+
+ "<div class=\"row\" style=\"justify-content:center\"><a class=\"btn\" href=\"#speeltuin\">Bekijk je presentatie</a><a class=\"btn\" href=\"#start\">Naar de kaart</a></div>";
+}
+
+/* ---------- render ---------- */
+var lastRoute=null;
+function route(){return (location.hash||"").replace("#","")||"start";}
+function render(keep){
+ var r=route(),app=$("app"),y=window.scrollY;
+ if(!S.rules&&r!=="ouders"&&r!=="spelregels"){app.innerHTML=onboarding();lastRoute=r;return;}
+ var m=/^les-(\d+)$/.exec(r);
+ if(r!=="speeltuin")play=null;
+ if(m)app.innerHTML=lessonView(parseInt(m[1],10));
+ else if(r==="speeltuin")app.innerHTML=deckView();
+ else if(r==="logboek")app.innerHTML=logView();
+ else if(r==="spelregels")app.innerHTML=rulesView();
+ else if(r==="ouders")app.innerHTML=parentsView();
+ else if(r==="diploma")app.innerHTML=diplomaView();
+ else app.innerHTML=homeView();
+ if(keep||lastRoute===r)window.scrollTo(0,y);else window.scrollTo(0,0);
+ lastRoute=r;
+}
+window.addEventListener("hashchange",function(){render(false);});
+
+/* ---------- actions ---------- */
+function say(id,msg){var e=$(id);if(e)e.textContent=msg;}
+function updateChips(key){var c=$("chips-"+key);if(c)c.innerHTML=chipsHTML(key);}
+document.addEventListener("input",function(e){
+ var t=e.target;if(!t.matches)return;
+ if(t.matches("textarea[data-key]")){var key=t.getAttribute("data-key");S.drafts[key]=t.value;save();updateChips(key);}
+ else if(t.matches("textarea[data-rkey]")){var k=t.getAttribute("data-rkey");var a=S.ans[k]||{c:null,t:""};a.t=t.value;S.ans[k]=a;save();}
+ else if(t.matches("input[data-fkey]")){var fk=t.getAttribute("data-fkey"),fi=parseInt(t.getAttribute("data-fi"),10);var arr=Array.isArray(S.ans[fk])?S.ans[fk]:[];arr[fi]=t.value;S.ans[fk]=arr;save();}
+ else if(t.id==="dtt"){S.deck.title=t.value;save();}
+ else if(t.matches("input[data-dt]")){S.deck.slides[parseInt(t.getAttribute("data-dt"),10)].title=t.value;save();}
+ else if(t.matches("textarea[data-dx]")){S.deck.slides[parseInt(t.getAttribute("data-dx"),10)].text=t.value;save();}
+});
+document.addEventListener("change",function(e){
+ var t=e.target;if(t.matches&&t.matches("input[data-img]")){var i=parseInt(t.getAttribute("data-img"),10);var f=t.files&&t.files[0];t.value="";processImage(f,i);}
+});
+document.addEventListener("keydown",function(e){
+ if(!play)return;var n=S.deck.slides.length;
+ if(e.key==="ArrowRight"&&play.at<n-1){play.at++;render(false);}
+ else if(e.key==="ArrowLeft"&&play.at>0){play.at--;render(false);}
+ else if(e.key==="Escape"){play=null;render(false);}
+});
+function copyFrom(text,ta,stId,okMsg){
+ var done=function(){say(stId,okMsg||"Gekopieerd! Plak hem nu in ChatGPT.");};
+ var fail=function(){if(ta){ta.focus();ta.setSelectionRange(0,99999);}say(stId,"Tik op de geselecteerde tekst en kies Kopieer.");};
+ try{if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(text).then(done,fail);}else{fail();}}catch(err){fail();}
+}
+document.addEventListener("click",function(e){
+ var b=e.target.closest?e.target.closest("[data-act]"):null;if(!b)return;
+ var act=b.getAttribute("data-act"),key=b.getAttribute("data-key"),i=parseInt(b.getAttribute("data-i"),10);
+ if(act==="agree"){var on=b.classList.toggle("on");b.setAttribute("aria-pressed",on);b.querySelector(".box").textContent=on?"✓":"";return;}
+ if(act==="start"){
+  var nm=($("nm").value||"").trim();var ag=$("agree").classList.contains("on");
+  if(!nm){say("obst","Vul eerst je naam in.");return;}
+  if(!ag){say("obst","Tik eerst op het vakje om te beloven dat je de spelregels volgt.");return;}
+  S.name=nm;S.rules=true;save();if(route()!=="start")location.hash="#start";render(false);return;
+ }
+ if(act==="quiz"){
+  var s=STEPS[key].s;var fb=$("fb-"+key);
+  if(i===s.ok){S.done[key]=true;save();render(true);}
+  else{b.classList.add("wrong");if(fb)fb.textContent="Nog niet. Probeer een ander antwoord.";}
+  return;
+ }
+ if(act==="layer"){
+  var l=b.getAttribute("data-layer");var auto=detect(draftOf(key));var cur=eff(key,l,auto);
+  S.manual[key]=S.manual[key]||{};S.manual[key][l]=!cur;save();updateChips(key);return;
+ }
+ if(act==="copy"){var ta=$("ta-"+key);copyFrom(ta.value,ta,"st-"+key);return;}
+ if(act==="savep"){
+  var e2=STEPS[key],s2=e2.s,ta2=$("ta-"+key),text=ta2.value.trim(),au=detect(text);
+  if(text.length<(s2.min||10)){say("st-"+key,"Schrijf nog wat meer. Een goede prompt is meestal een of twee zinnen.");return;}
+  if(s2.forbid&&s2.forbid.some(function(f){return text.indexOf(f)>=0;})){say("st-"+key,s2.forbidMsg);return;}
+  var miss=(s2.need||[]).filter(function(l2){return !eff(key,l2,au);});
+  if(miss.length){say("st-"+key,"Nog niet klaar. Er mist nog: "+miss.map(function(l3){return LAYERS[l3].n.toLowerCase()+". "+LAYERS[l3].hint;}).join(" "));return;}
+  S.drafts[key]=text;S.done[key]=true;
+  var entry={key:key,lesson:e2.L.id,title:s2.title,text:text,d:new Date().toISOString()};
+  var found=false;S.log=S.log.map(function(x){if(x.key===key){found=true;return entry;}return x;});if(!found)S.log.push(entry);
+  save();render(true);return;
+ }
+ if(act==="off"){if(S.done[key])delete S.done[key];else S.done[key]=true;save();render(true);return;}
+ if(act==="rc"){var a=S.ans[key]||{c:null,t:""};a.c=i;S.ans[key]=a;save();render(true);return;}
+ if(act==="rsave"){
+  var s3=STEPS[key].s,a3=S.ans[key]||{c:null,t:""},ta3=document.querySelector("textarea[data-rkey=\""+key+"\"]");if(ta3)a3.t=ta3.value;
+  if(s3.choices&&s3.choices.length){if(a3.c===null){say("st-"+key,"Kies eerst een antwoord.");return;}}
+  else if((a3.t||"").trim().length<5){say("st-"+key,"Schrijf nog wat meer op.");return;}
+  S.ans[key]=a3;S.done[key]=true;save();render(true);return;
+ }
+ if(act==="fsave"){
+  var fs=STEPS[key].s,fa=Array.isArray(S.ans[key])?S.ans[key]:[];
+  for(var q=0;q<fs.fields.length;q++){if((fa[q]||"").trim().length<3){say("st-"+key,"Vul bij "+fs.fields[q].l+" nog iets in.");return;}}
+  S.done[key]=true;save();render(true);return;
+ }
+ if(act==="chk"){
+  var arr=S.checks[key]||[];arr[i]=!arr[i];S.checks[key]=arr;
+  var n=STEPS[key].s.items.length,all=true;for(var z=0;z<n;z++){if(!arr[z])all=false;}
+  if(all)S.done[key]=true;else delete S.done[key];save();render(true);return;
+ }
+ if(act==="copylog"){var ent=S.log.filter(function(x){return x.key===key;})[0];if(ent)copyFrom(ent.text,null,"logst");return;}
+ /* speeltuin */
+ if(act==="theme"){S.deck.theme=b.getAttribute("data-k");S.deck.themeSet=true;save();render(true);return;}
+ if(act==="sadd"){S.deck.slides.push({title:"",text:"",img:""});save();render(true);return;}
+ if(act==="sdel"){
+  if(!b.getAttribute("data-sure")){b.setAttribute("data-sure","1");b.textContent="Zeker? Tik nog eens";return;}
+  S.deck.slides.splice(i,1);save();render(true);return;
+ }
+ if(act==="up"&&i>0){var sl=S.deck.slides;var tmp=sl[i-1];sl[i-1]=sl[i];sl[i]=tmp;save();render(true);return;}
+ if(act==="down"&&i<S.deck.slides.length-1){var sl2=S.deck.slides;var tmp2=sl2[i+1];sl2[i+1]=sl2[i];sl2[i]=tmp2;save();render(true);return;}
+ if(act==="imgdel"){S.deck.slides[i].img="";save();render(true);return;}
+ if(act==="play"){play={at:0};render(false);return;}
+ if(act==="pstop"){play=null;render(false);return;}
+ if(act==="pnext"){if(play.at<S.deck.slides.length-1)play.at++;render(false);return;}
+ if(act==="pprev"){if(play.at>0)play.at--;render(false);return;}
+ if(act==="reset1"){$("resetbox").innerHTML="<p><b>Weet je zeker dat je alles wilt wissen?</b> Dit kan niet ongedaan worden gemaakt.</p><button class=\"primary\" data-act=\"reset2\">Ja, alles wissen</button> <button data-act=\"reset0\">Nee, terug</button>";return;}
+ if(act==="reset0"){$("resetbox").innerHTML="<button data-act=\"reset1\">Alles wissen</button>";return;}
+ if(act==="reset2"){S=defaults();save();location.hash="#start";render(false);return;}
+});
+render(false);
+})();
+
+</script>
+</body>
+</html>
