@@ -135,6 +135,8 @@ var KEY="ai-avontuur-v1";
 /* ---------- state ---------- */
 function defaults(){return {name:"",rules:false,done:{},drafts:{},manual:{},log:[],ans:{},checks:{}};}
 var S=load();
+var PK="ai-profiel-v1";
+(function(){try{var p=JSON.parse(localStorage.getItem(PK)||"{}");if(!S.name&&p.name){S.name=p.name;S.rules=true;save();}}catch(e){}})();
 function load(){try{var r=localStorage.getItem(KEY);if(r){var o=JSON.parse(r);var d=defaults();for(var k in d){if(o[k]!==undefined)d[k]=o[k];}return d;}}catch(e){}return defaults();}
 function save(){try{localStorage.setItem(KEY,JSON.stringify(S));}catch(e){}}
 
@@ -426,7 +428,7 @@ document.addEventListener("click",function(e){
   var nm=($("nm").value||"").trim();var ag=$("agree").classList.contains("on");
   if(!nm){say("obst","Vul eerst je naam in.");return;}
   if(!ag){say("obst","Tik eerst op het vakje om te beloven dat je de spelregels volgt.");return;}
-  S.name=nm;S.rules=true;save();if(route()!=="start")location.hash="#start";render(false);return;
+  S.name=nm;S.rules=true;save();try{localStorage.setItem(PK,JSON.stringify({name:nm}));}catch(e){}if(route()!=="start")location.hash="#start";render(false);return;
  }
  if(act==="quiz"){
   var s=STEPS[key].s;var fb=$("fb-"+key);
@@ -469,7 +471,7 @@ document.addEventListener("click",function(e){
  }
  if(act==="reset1"){$("resetbox").innerHTML="<p><b>Weet je zeker dat je alles wilt wissen?</b> Dit kan niet ongedaan worden gemaakt.</p><button class=\"primary\" data-act=\"reset2\">Ja, alles wissen</button> <button data-act=\"reset0\">Nee, terug</button>";return;}
  if(act==="reset0"){$("resetbox").innerHTML="<button data-act=\"reset1\">Voortgang wissen</button>";return;}
- if(act==="reset2"){S=defaults();save();location.hash="#start";render(false);return;}
+ if(act==="reset2"){S=defaults();save();try{localStorage.removeItem(PK);}catch(e){}location.hash="#start";render(false);return;}
 });
 render(false);
 })();
