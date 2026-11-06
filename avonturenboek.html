@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Avonturenboek</title>
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<meta name="apple-mobile-web-app-title" content="Avonturenboek">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* Plan: avonturenboek voor 9-11 jaar. Inktblauw, teal, zon-geel, groen, zand.
+   Layout: een brede kolom, grote tikvlakken voor iPad, een pizza als voortgangskaart. */
+:root{
+  --ink:#1c2340; --paper:#f1f4ff; --card:#ffffff; --line:#d9deef; --soft:#e9edfb; --muted:#566086;
+  --tomato:#0f7a6d; --on-tomato:#ffffff; --sun:#ffc531; --basil:#17835a; --on-basil:#ffffff;
+  --dough:#e8c58a; --dough-soft:#f3e3c1; --blue:#2a62ff; --bad:#fdeceb; --good:#e3f6ec;
+  --display:"Fredoka","Trebuchet MS",system-ui,sans-serif; --body:"Nunito",system-ui,-apple-system,"Segoe UI",sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ink:#eef0ff; --paper:#121629; --card:#1c2240; --line:#323a63; --soft:#262d52; --muted:#aab2d8;
+    --tomato:#3ccdb8; --on-tomato:#06231f; --basil:#3cc593; --on-basil:#0b2a1f;
+    --dough-soft:#3a3550; --blue:#8aa8ff; --bad:#3b2230; --good:#17332b; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --ink:#eef0ff; --paper:#121629; --card:#1c2240; --line:#323a63; --soft:#262d52; --muted:#aab2d8;
+  --tomato:#3ccdb8; --on-tomato:#06231f; --basil:#3cc593; --on-basil:#0b2a1f;
+  --dough-soft:#3a3550; --blue:#8aa8ff; --bad:#3b2230; --good:#17332b; color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:18px;line-height:1.55;-webkit-text-size-adjust:100%}
+.wrap{max-width:880px;margin:0 auto;padding:16px 16px calc(72px + env(safe-area-inset-bottom));padding-top:calc(16px + env(safe-area-inset-top))}
+h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.15;margin:0 0 .5em;text-wrap:balance}
+h1{font-size:2.3rem} h2{font-size:1.55rem} h3{font-size:1.25rem}
+p{margin:0 0 .8em}
+a{color:var(--blue)}
+:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:18px}
+.brand{font-family:var(--display);font-weight:700;font-size:1.4rem;text-decoration:none;color:var(--ink);display:flex;align-items:center;gap:10px}
+.brand i{display:inline-block;width:28px;height:28px;border-radius:50%;background:radial-gradient(circle at 35% 35%,var(--sun) 0 22%,var(--tomato) 24% 100%);border:3px solid var(--dough)}
+.nav{display:flex;gap:8px;flex-wrap:wrap}
+.btn,button{font-family:var(--display);font-weight:600;font-size:1.05rem;min-height:52px;padding:0 20px;border-radius:14px;border:2px solid var(--ink);background:var(--card);color:var(--ink);cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;touch-action:manipulation}
+.btn.small,button.small{min-height:44px;padding:0 14px;font-size:1rem}
+.primary{background:var(--tomato);border-color:var(--tomato);color:var(--on-tomato)}
+.ghost{background:transparent}
+button:disabled{opacity:.5;cursor:default}
+.card{background:var(--card);border:2px solid var(--line);border-radius:22px;padding:20px;margin-bottom:16px}
+.tag{display:inline-block;font-family:var(--display);font-weight:600;font-size:.85rem;padding:2px 12px;border-radius:99px;margin-bottom:10px;background:var(--soft);color:var(--ink)}
+.tag.probeer{background:var(--sun);color:#1c2340}
+.tag.ontdek{background:var(--blue);color:#fff}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .tag.ontdek{color:#10163a}}
+:root[data-theme="dark"] .tag.ontdek{color:#10163a}
+.tag.samen{background:var(--basil);color:var(--on-basil)}
+.tag.denk{background:var(--dough);color:#1c2340}
+.done-badge{float:right;font-family:var(--display);font-weight:600;background:var(--basil);color:var(--on-basil);border-radius:99px;padding:2px 14px;font-size:.9rem}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:12px}
+textarea,input[type=text]{width:100%;font-family:var(--body);font-size:18px;line-height:1.5;color:var(--ink);background:var(--paper);border:2px solid var(--line);border-radius:14px;padding:12px 14px}
+textarea{resize:vertical;min-height:120px}
+.bad,.good{border-radius:14px;padding:10px 14px;margin:0 0 12px}
+.bad{background:var(--bad)} .good{background:var(--good)}
+.tip{background:var(--soft);border-left:6px solid var(--sun);border-radius:12px;padding:10px 14px;margin-top:12px}
+.status{min-height:1.5em;margin:10px 0 0;font-weight:700}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.chip{min-height:44px;padding:0 16px;font-size:1rem;border-radius:99px;border-style:dashed;border-color:var(--muted);color:var(--muted);background:transparent}
+.chip.needed{border-style:solid;border-color:var(--ink);color:var(--ink)}
+.chip.on{background:var(--basil);border-color:var(--basil);color:var(--on-basil);border-style:solid}
+.hintline{font-size:.95rem;color:var(--muted);margin:8px 0 0}
+.opt{display:block;width:100%;text-align:left;justify-content:flex-start;margin-bottom:10px;min-height:56px;padding:10px 18px;font-family:var(--body);font-weight:700;font-size:1.05rem;line-height:1.35}
+.opt.right{background:var(--basil);border-color:var(--basil);color:var(--on-basil)}
+.opt.wrong{background:var(--bad);border-color:var(--tomato)}
+.opt.sel{border-color:var(--blue);box-shadow:inset 0 0 0 3px var(--blue)}
+.fb{margin:6px 0 0;font-weight:700}
+.bar{height:12px;border-radius:99px;background:var(--soft);overflow:hidden}
+.bar>span{display:block;height:100%;background:var(--basil);border-radius:99px}
+.hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,260px);gap:20px;align-items:center}
+@media (max-width:640px){.hero{grid-template-columns:1fr}}
+.pizza{width:100%;max-width:260px;height:auto;margin:0 auto;display:block}
+.pizza a{cursor:pointer}
+.pizza text{font-family:var(--display);font-weight:700;font-size:20px;pointer-events:none}
+.lessons{display:grid;gap:12px;margin:0;padding:0;list-style:none}
+.lesson{display:grid;grid-template-columns:56px minmax(0,1fr) auto;gap:14px;align-items:center;text-decoration:none;color:var(--ink);background:var(--card);border:2px solid var(--line);border-radius:20px;padding:14px 16px}
+.lesson:hover{border-color:var(--ink)}
+.num{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;font-family:var(--display);font-weight:700;font-size:1.5rem;background:var(--dough-soft);color:#1c2340;border:3px solid var(--dough)}
+.lesson.finished .num{background:var(--tomato);border-color:var(--tomato);color:var(--on-tomato)}
+.lesson b{font-family:var(--display);font-size:1.15rem;display:block;line-height:1.2}
+.lesson small{display:block;color:var(--muted);font-size:.95rem}
+.lesson .bar{margin-top:8px}
+.go{font-family:var(--display);font-weight:600;color:var(--muted);white-space:nowrap}
+.layers{display:flex;flex-direction:column;align-items:center;gap:6px;margin:14px 0 4px}
+.layer{border-radius:18px;padding:8px 16px;color:#1c2340;min-width:min(100%,270px);text-align:center;transition:opacity .2s}
+.layer b{font-family:var(--display);font-size:1.1rem}
+.layer span{display:block;font-size:.95rem;line-height:1.3}
+.layer.dim{opacity:.35}
+.l-toppings{background:#7fd1a8}.l-kaas{background:#ffd75e}.l-saus{background:#f08a78}.l-bodem{background:#e8c58a}
+ul,ol{padding-left:1.3em;margin:0 0 .8em} li{margin-bottom:.35em}
+.checkrow{display:flex;gap:12px;align-items:flex-start;width:100%;text-align:left;justify-content:flex-start;min-height:56px;padding:10px 16px;margin-bottom:8px;font-family:var(--body);font-weight:700;font-size:1.05rem;line-height:1.35}
+.box{flex:0 0 28px;width:28px;height:28px;border-radius:8px;border:3px solid var(--ink);display:grid;place-items:center;font-size:1rem;margin-top:1px}
+.checkrow.on .box{background:var(--basil);border-color:var(--basil);color:var(--on-basil)}
+.log{border-top:2px solid var(--line);padding-top:12px;margin-top:12px}
+.log pre{white-space:pre-wrap;word-break:break-word;font-family:var(--body);font-size:1rem;margin:6px 0;background:var(--paper);border-radius:12px;padding:10px 12px}
+.diploma{text-align:center;border:6px double var(--dough);border-radius:24px;padding:32px 20px;background:var(--card)}
+.diploma h1{font-size:2.6rem}
+.foot{margin-top:28px;display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+.foot a{color:var(--muted);font-weight:700}
+.lessonnav{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:8px}
+@media (prefers-reduced-motion: no-preference){.bar>span{transition:width .4s}}
+
+.path{width:100%;max-width:340px;height:auto;margin:0 auto;display:block}
+.path a{cursor:pointer}
+.path text{font-family:var(--display);font-weight:700;font-size:18px;pointer-events:none}
+.flabel{display:block;font-family:var(--display);font-weight:600;margin:12px 0 4px}
+.goals{list-style:none;padding:0;margin:0 0 8px}
+.goals li{display:flex;gap:10px;margin-bottom:6px;align-items:flex-start}
+.goals .gm{flex:0 0 24px;width:24px;height:24px;border-radius:50%;display:grid;place-items:center;border:2px solid var(--muted);font-size:.85rem;margin-top:2px;color:var(--muted)}
+.goals li.ok .gm{background:var(--basil);border-color:var(--basil);color:var(--on-basil)}
+.chrow{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,190px) auto;gap:8px;margin-top:10px;align-items:center}
+@media (max-width:640px){.chrow{grid-template-columns:1fr}}
+select{font-family:var(--body);font-size:18px;min-height:52px;border:2px solid var(--line);border-radius:14px;background:var(--paper);color:var(--ink);padding:0 10px;width:100%}
+.player{border-radius:24px;padding:24px 20px;margin-bottom:16px}
+.player .ptitle{font-family:var(--display);font-weight:600;opacity:.8;margin:0 0 12px}
+.player .story{font-size:1.25rem;line-height:1.6;white-space:pre-wrap}
+.player h2{margin-top:8px}
+.pc{display:block;width:100%;text-align:left;justify-content:flex-start;margin-top:10px;min-height:56px;padding:10px 18px;background:rgba(255,255,255,.14);color:inherit;border-color:currentColor;font-family:var(--body);font-weight:800;font-size:1.1rem}
+.pg{background:transparent;color:inherit;border-color:currentColor}
+.scene textarea{min-height:100px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="#start"><i aria-hidden="true"></i>Avonturenboek</a>
+    <nav class="nav" aria-label="Menu">
+      <a class="btn small" href="#start">Kaart</a>
+      <a class="btn small" href="#speeltuin">Speeltuin</a>
+      <a class="btn small" href="#logboek">Mijn logboek</a>
+    </nav>
+  </header>
+  <main id="app"><noscript><section class="card"><h2>Open het Avonturenboek in Safari</h2><p>Dit boek werkt niet in een voorbeeldvenster van Mail of Bestanden, want daar draaien de opdrachten niet. Open de link van het boek in Safari.</p></section></noscript></main>
+  <div class="foot" id="foot">
+    <a href="#spelregels">Spelregels</a>
+    <a href="#ouders">Voor ouders</a>
+  </div>
+</div>
+<script>
+(function(){
+"use strict";
+var KEY="avonturenboek-v1";
+
+/* ---------- state ---------- */
+function newStory(){return {title:"",theme:"bos",themeSet:false,scenes:[{text:"",choices:[]}]};}
+function defaults(){return {name:"",rules:false,done:{},drafts:{},manual:{},log:[],ans:{},checks:{},story:newStory()};}
+var S=load();
+function load(){try{var r=localStorage.getItem(KEY);if(r){var o=JSON.parse(r);var d=defaults();for(var k in d){if(o[k]!==undefined)d[k]=o[k];}if(!d.story||!d.story.scenes||!d.story.scenes.length)d.story=newStory();return d;}}catch(e){}return defaults();}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S));}catch(e){}}
+
+/* ---------- content ---------- */
+var LAYERS={
+ bodem:{n:"Bodem",d:"De opdracht",q:"Wat moet ChatGPT doen?",hint:"Zeg wat ChatGPT moet doen, bijvoorbeeld bedenk, schrijf of maak."},
+ saus:{n:"Saus",d:"De context",q:"Wie ben ik, voor wie is het en waarom?",hint:"Vertel wie je bent en waarvoor het is, bijvoorbeeld: Ik ben 10 en maak een avontuur."},
+ kaas:{n:"Kaas",d:"Een voorbeeld",q:"Hoe moet het ongeveer worden?",hint:"Geef een voorbeeld met het woord zoals of bijvoorbeeld."},
+ toppings:{n:"Toppings",d:"De regels",q:"Hoeveel, hoe lang, welke toon, wat niet?",hint:"Voeg regels toe: hoeveel zinnen, hoe spannend of wat niet."}
+};
+var THEMES={bos:["Bos","#1f4d3a","#f2ffe9"],ruimte:["Ruimte","#14143a","#e8e8ff"],zee:["Zee","#0c3b5c","#e6f6ff"],kasteel:["Kasteel","#4a3a2a","#fff4e0"]};
+var RULES=[
+ ["Geen geheimen delen","Typ nooit je achternaam, adres, school, telefoonnummer of foto's van mensen. Zet ze ook niet in je verhaal."],
+ ["AI kan fout zitten","Check belangrijke dingen op een tweede plek, zoals in een boek of bij een volwassene."],
+ ["Eerst zelf denken","Bedenk eerst wat jij zelf denkt en vraag het dan pas."],
+ ["Eerlijk blijven","Zeg erbij als ChatGPT een deel van je verhaal heeft geholpen. Het idee en de keuzes zijn van jou."],
+ ["Vriendelijk blijven","Maak geen gemene of verzonnen verhalen over echte mensen."],
+ ["Raar of eng antwoord?","Stop en haal meteen een volwassene. Dat is slim, niet stout."]
+];
+
+var LESSONS=[
+{id:1,title:"Een avontuur bedenken",sub:"Held, plek, probleem en doel",steps:[
+ {t:"text",h:"Elk goed avontuur heeft vier dingen",p:["Een held (wie?), een plek (waar?), een probleem (wat gaat mis?) en een doel (wat wil de held?).","In dit avontuur beslist de lezer zelf hoe het verder gaat. Dat heet een verhaal met keuzes."]},
+ {t:"quiz",id:"q1",q:"Wat is een probleem in een avontuur?",opts:["De held heet Sam.","De brug naar het kasteel is kapot.","Het verhaal speelt in een bos."],ok:1,why:"Een probleem is iets wat de held moet oplossen. Zonder probleem is er geen spanning."},
+ {t:"offline",id:"o1",title:"Wat als...?",text:"Speel dit in de auto of aan tafel. Een van jullie begint met Wat als...? bijvoorbeeld: Wat als de kat kan praten? De ander maakt het verhaal verder in één zin. Doe minstens tien beurten."},
+ {t:"prompt",id:"p1",title:"Ideeën laten bedenken",task:"Laat ChatGPT drie ideeën bedenken voor een avontuur waarin de lezer keuzes maakt. Gebruik bodem, saus en toppings uit de Prompt-Pizza.",need:["bodem","saus","toppings"],min:50},
+ {t:"form",id:"f1",title:"Mijn avontuur in vier regels",task:"Kies een idee van ChatGPT, of maak er zelf een van. Vul de vier dingen in.",fields:[{l:"Held",ph:"Wie is het?"},{l:"Plek",ph:"Waar gebeurt het?"},{l:"Probleem",ph:"Wat gaat er mis?"},{l:"Doel",ph:"Wat wil de held bereiken?"}]},
+ {t:"reflect",id:"r1",q:"Wat heb je zelf veranderd aan het idee van ChatGPT?",choices:[],ask:"Schrijf in een of twee zinnen wat jij hebt aangepast of bedacht."}
+]},
+{id:2,title:"Scènes en keuzes",sub:"Je verhaal als een boom",steps:[
+ {t:"text",h:"Een scène eindigt met een keuze",p:["Een scène is een stukje verhaal. Aan het eind kiest de lezer.","Bijvoorbeeld: Je staat voor een donkere grot. Ga je naar binnen, of klim je de berg op? Elke keuze leidt naar een nieuwe scène. Sommige paden stoppen. Dat zijn eindscènes."],tip:"Een goede keuze heeft twee antwoorden die allebei spannend zijn. Een keuze met een duidelijk beste antwoord is saai."},
+ {t:"quiz",id:"q1",q:"Welke keuze is het best?",opts:["Ga je door of niet?","Ga je de donkere grot in, of klim je de berg op?","Wil je winnen?"],ok:1,why:"Beide kanten zijn anders en spannend."},
+ {t:"offline",id:"o1",title:"Teken je verhaalboom",text:"Pak een groot vel papier. Teken een rondje voor elke scène en pijlen voor elke keuze. Begin met 5 rondjes. Welke scènes zijn eindscènes?"},
+ {t:"storygoal",id:"g1",title:"Je eerste scènes",task:"Open de speeltuin en maak 5 scènes. Schrijf eerst alleen een paar woorden per scène. Verbind ze met minstens 4 keuzes.",minScenes:5,minChoices:4},
+ {t:"reflect",id:"r1",q:"Hoe ging het van papier naar de speeltuin?",choices:["Het paste meteen","Ik moest iets veranderen"],ask:"Wat veranderde je aan je verhaalboom?"}
+]},
+{id:3,title:"Schrijven met ChatGPT",sub:"Jij beslist, ChatGPT helpt",steps:[
+ {t:"text",h:"Jij bent de schrijver",p:["ChatGPT kan scènes schrijven. Maar jij beslist wat blijft en wat verandert. Lees het, kies de beste stukken en pas het aan met je eigen woorden.","Je kent de Prompt-Pizza al. Gebruik hem hier weer."],layers:["bodem","saus","kaas","toppings"],tip:"Eerlijk blijven: zeg erbij dat ChatGPT een deel heeft geholpen. Het idee en de keuzes zijn van jou."},
+ {t:"quiz",id:"q1",q:"ChatGPT schrijft een scène. Wat doe jij?",opts:["Alles kopiëren, klaar","Lezen, de beste stukken kiezen en aanpassen","Niets, ChatGPT beslist"],ok:1,why:"Jij bent de schrijver. ChatGPT is je hulp."},
+ {t:"prompt",id:"p1",title:"Scène 1 schrijven",task:"Vervang alles tussen de haken door je eigen idee.",start:"Ik ben 10 en maak een avontuur waarin de lezer kiest. De held is [naam] en is in [plek]. Schrijf scène 1 in maximaal 6 zinnen, spannend, en eindig met een keuze tussen twee dingen.",need:["bodem","saus","toppings"],min:60,forbid:["[","]"],forbidMsg:"Vervang alles tussen [ ] door je eigen woorden."},
+ {t:"prompt",id:"p2",title:"Een volgende scène",task:"Kies een keuze uit je vorige scène en laat ChatGPT de volgende scène schrijven.",start:"Dit gebeurde in de vorige scène: [kort stukje]. De lezer kiest voor [keuze]. Schrijf de volgende scène in maximaal 6 zinnen en eindig met twee keuzes.",need:["bodem","toppings"],min:60,forbid:["[","]"],forbidMsg:"Vervang alles tussen [ ] door je eigen woorden."},
+ {t:"storygoal",id:"g1",title:"Schrijf je scènes",task:"Kopieer de stukken die je wilt houden uit ChatGPT en plak ze in de scènes van je speeltuin. Pas ze aan en voeg keuzes toe.",minTextScenes:5,minChoices:4}
+]},
+{id:4,title:"Sfeer en spanning",sub:"Laat de lezer het voelen",steps:[
+ {t:"text",h:"Woorden maken sfeer",p:["Laat de lezer horen, ruiken en voelen. Niet: Het was donker. Maar: Water druppelt van het plafond en de lucht is koud.","Gebruik korte zinnen als het spannend wordt."],list:["Gebruik je zintuigen: zien, horen, ruiken, voelen.","Eindig een scène vlak voor iets spannends.","Maak zinnen korter als het spannend wordt."]},
+ {t:"quiz",id:"q1",q:"Welke zin heeft de meeste sfeer?",opts:["Het was een grot.","Water druppelt van het plafond en je hoort iets ademen.","De grot was groot."],ok:1,why:"Je hoort en voelt het mee. Dat maakt sfeer."},
+ {t:"prompt",id:"p1",title:"Een scène spannender maken",task:"Plak je eigen scène in plaats van [plak je scène] en vraag ChatGPT om meer sfeer.",start:"Hier is mijn scène: [plak je scène]. Maak hem spannender met geluiden en geuren, maar houd hem onder 6 zinnen.",need:["bodem","toppings"],min:60,forbid:["[","]"],forbidMsg:"Vervang [plak je scène] door je eigen scène."},
+ {t:"offline",id:"o1",title:"Teken de sfeer",text:"Teken bij drie scènes een plaatje op papier. Wat zie je, wat hoor je, wat ruik je? Schrijf er een zin bij en gebruik die in je verhaal."},
+ {t:"storygoal",id:"g1",title:"Thema en titel",task:"Kies in de speeltuin een thema en een titel. Bouw je avontuur uit tot minstens 7 scènes.",minScenes:7,needTitle:true,needTheme:true}
+]},
+{id:5,title:"Testen en verbeteren",sub:"Laat een ander spelen",steps:[
+ {t:"text",h:"Jij weet hoe het afloopt, de speler niet",p:["Laat iemand anders je avontuur spelen. Kijk waar die persoon twijfelt, lacht of vastloopt. Dat zijn je verbeterpunten.","Zeg tijdens het spelen zelf niets. Dat is moeilijk, maar het werkt."]},
+ {t:"offline",id:"o1",title:"Speeltest",text:"Laat iemand uit je gezin je avontuur spelen in de speeltuin. Zeg niets. Schrijf op waar die persoon twijfelde, wat die persoon leuk vond en waar het verwarrend was."},
+ {t:"prompt",id:"p1",title:"Feedback vragen aan ChatGPT",task:"Plak een scène en vraag om tips. Jij bepaalt welke tips je gebruikt.",start:"Hier is een scène uit mijn avontuur: [plak je scène]. Wat kan er beter? Geef 3 tips, kort en makkelijk te begrijpen.",need:["bodem","toppings"],min:60,forbid:["[","]"],forbidMsg:"Vervang [plak je scène] door je eigen scène."},
+ {t:"storygoal",id:"g1",title:"Elk pad komt ergens uit",task:"Zorg dat je avontuur minstens 2 eindscènes heeft en dat elke scène een stukje verhaal heeft.",minEnds:2,needAllText:true},
+ {t:"check",id:"k1",title:"Mijn speeltest",items:["Iemand heeft mijn avontuur gespeeld.","Ik heb gekeken waar die persoon twijfelde of vastliep.","Ik heb minstens twee dingen verbeterd.","Elk pad komt ergens uit."]}
+]},
+{id:6,title:"Afmaken en presenteren",sub:"Laat zien wat je gemaakt hebt",steps:[
+ {t:"text",h:"Maak het af",p:["Lees je avontuur nog een keer helemaal door. Klopt alles? Staan er typfouten in? Past de titel bij het verhaal?","Daarna mag de familie het spelen."]},
+ {t:"storygoal",id:"g1",title:"Je eindversie",task:"Maak je avontuur af in de speeltuin.",minScenes:8,minEnds:2,needAllText:true,needTitle:true,needTheme:true},
+ {t:"offline",id:"o1",title:"Speel met de familie",text:"Verzamel de familie. Laat ze om de beurt de keuzes maken, of laat ze zelf spelen. Welk pad kiest de meeste mensen? Je kunt je avontuur ook delen via de speeltuin."},
+ {t:"reflect",id:"r1",q:"Waar ben je het meest trots op?",choices:[],ask:"Schrijf het op in een of twee zinnen."},
+ {t:"reflect",id:"r2",q:"Wat zou je volgende keer anders doen?",choices:[],ask:"Schrijf het op in een of twee zinnen."},
+ {t:"check",id:"k1",title:"Afronding",items:["Mijn titel en thema zijn klaar.","Ik heb mijn avontuur laten spelen of gedeeld.","Ik heb in mijn logboek gekeken welke prompts het best werkten."]}
+]}
+];
+
+/* ---------- helpers ---------- */
+var STEPS={};
+LESSONS.forEach(function(L){L.steps.forEach(function(s){if(s.id){STEPS[L.id+"-"+s.id]={L:L,s:s};}});});
+function esc(t){return String(t).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c];});}
+function $(id){return document.getElementById(id);}
+var RX={
+ bodem:/\b(bedenk|bedenken|schrijf|schrijven|maak|maken|leg|geef|vertel|teken|verzin|help|noem|vergelijk|stel|laat|bouw|plan|ontwerp|kun je|kan je)\b/,
+ saus:/\b(ik ben|ik zit|ik heb|ik wil|ik vind|ik ga|alsof ik|mijn|voor mij|voor een|voor de|omdat|zodat)\b/,
+ kaas:/(bijvoorbeeld|zoals|voorbeeld|zo'n|zo een|net als|in de stijl)/,
+ toppings:/(\d|\bkort|\blang|grappig|spannend|makkelijk|simpel|eenvoudig|woorden|zinnen|regels|\bniet\b|\bgeen\b|maximaal|minimaal|alinea|stappen|rijm|onder)/
+};
+function detect(t){t=(t||"").toLowerCase();return {bodem:RX.bodem.test(t),saus:RX.saus.test(t),kaas:RX.kaas.test(t),toppings:RX.toppings.test(t)};}
+function eff(key,layer,auto){var m=S.manual[key];return (m&&m[layer]!==undefined)?m[layer]:auto[layer];}
+function draftOf(key){var e=STEPS[key];if(S.drafts[key]!==undefined)return S.drafts[key];return e.s.start||"";}
+
+/* story stats and goals */
+function stats(){
+ var st=S.story,sc=st.scenes,ts=0,ch=0,ends=0;
+ sc.forEach(function(s){
+  var has=(s.text||"").trim().length>=20;if(has)ts++;
+  var c=(s.choices||[]).filter(function(x){return (x.t||"").trim().length>=2;});
+  ch+=c.length;if(has&&c.length===0)ends++;
+ });
+ return {scenes:sc.length,textScenes:ts,choices:ch,ends:ends,title:(st.title||"").trim().length>=2,theme:!!st.themeSet};
+}
+function reqs(g){
+ var s=stats(),r=[];
+ if(g.minScenes)r.push({ok:s.scenes>=g.minScenes,label:"Minstens "+g.minScenes+" scènes (nu "+s.scenes+")"});
+ if(g.minTextScenes)r.push({ok:s.textScenes>=g.minTextScenes,label:"In minstens "+g.minTextScenes+" scènes staat een stukje verhaal (nu "+s.textScenes+")"});
+ if(g.needAllText)r.push({ok:s.textScenes===s.scenes,label:"Elke scène heeft een stukje verhaal van minstens 20 tekens ("+s.textScenes+" van "+s.scenes+")"});
+ if(g.minChoices)r.push({ok:s.choices>=g.minChoices,label:"Minstens "+g.minChoices+" keuzes (nu "+s.choices+")"});
+ if(g.minEnds)r.push({ok:s.ends>=g.minEnds,label:"Minstens "+g.minEnds+" eindscènes, dat zijn scènes zonder keuzes (nu "+s.ends+")"});
+ if(g.needTitle)r.push({ok:s.title,label:"Je avontuur heeft een titel"});
+ if(g.needTheme)r.push({ok:s.theme,label:"Je hebt een thema gekozen"});
+ return r;
+}
+function stepDone(key){var e=STEPS[key];if(e&&e.s.t==="storygoal")return reqs(e.s).every(function(x){return x.ok;});return !!S.done[key];}
+function progress(L){var t=0,d=0;L.steps.forEach(function(s){if(s.id){t++;if(stepDone(L.id+"-"+s.id))d++;}});return {t:t,d:d};}
+function lessonFinished(L){var p=progress(L);return p.d===p.t;}
+function allFinished(){return LESSONS.every(lessonFinished);}
+function pct(L){var p=progress(L);return Math.round(100*p.d/p.t);}
+
+/* ---------- views ---------- */
+function layersHTML(hl){
+ var order=["toppings","kaas","saus","bodem"];var widths={toppings:"68%",kaas:"80%",saus:"90%",bodem:"100%"};
+ return "<div class=\"layers\" role=\"list\">"+order.map(function(k){
+  var L=LAYERS[k];var dim=hl&&hl.indexOf(k)<0?" dim":"";
+  return "<div class=\"layer l-"+k+dim+"\" role=\"listitem\" style=\"width:"+widths[k]+"\"><b>"+L.n+": "+L.d+"</b><span>"+L.q+"</span></div>";
+ }).join("")+"</div>";
+}
+function pathSVG(){
+ var out="<svg class=\"path\" viewBox=\"0 0 300 130\" role=\"img\" aria-label=\"Pad met 6 stops, een per les\">";
+ var pts=LESSONS.map(function(L,i){return [30+i*48,i%2===0?88:42];});
+ out+="<polyline points=\""+pts.map(function(p){return p.join(",");}).join(" ")+"\" fill=\"none\" stroke=\"var(--dough)\" stroke-width=\"6\" stroke-dasharray=\"2 10\" stroke-linecap=\"round\"/>";
+ LESSONS.forEach(function(L,i){
+  var p=pts[i],fin=lessonFinished(L);
+  out+="<a href=\"#les-"+L.id+"\" aria-label=\"Les "+L.id+": "+L.title+(fin?" (klaar)":"")+"\"><circle cx=\""+p[0]+"\" cy=\""+p[1]+"\" r=\"17\" fill=\""+(fin?"var(--tomato)":"var(--dough-soft)")+"\" stroke=\""+(fin?"var(--tomato)":"var(--dough)")+"\" stroke-width=\"3\"/><text x=\""+p[0]+"\" y=\""+(p[1]+7)+"\" text-anchor=\"middle\" fill=\""+(fin?"var(--on-tomato)":"#1c2340")+"\">"+L.id+"</text></a>";
+ });
+ var last=pts[5];
+ out+="<path d=\"M"+(last[0]+24)+" "+(last[1]-6)+" L"+(last[0]+24)+" "+(last[1]-34)+" L"+(last[0]+42)+" "+(last[1]-27)+" L"+(last[0]+24)+" "+(last[1]-20)+"\" fill=\"var(--sun)\" stroke=\"var(--ink)\" stroke-width=\"2\" stroke-linejoin=\"round\"/>";
+ return out+"</svg>";
+}
+function rulesHTML(){return "<ol>"+RULES.map(function(r){return "<li><b>"+r[0]+".</b> "+r[1]+"</li>";}).join("")+"</ol>";}
+function onboarding(){
+ return "<section class=\"card\"><h1>Welkom bij het Avonturenboek</h1><p>In 6 lessen maak je je eigen avontuur waarin de lezer kiest hoe het verder gaat. ChatGPT helpt je, maar jij bent de schrijver. Je speelt je verhaal meteen in de speeltuin.</p>"+
+ "<h2>Hoe heet je?</h2><input type=\"text\" id=\"nm\" autocomplete=\"off\" maxlength=\"24\" placeholder=\"Jouw voornaam\" aria-label=\"Jouw voornaam\" value=\""+esc(S.name)+"\">"+
+ "<h2 style=\"margin-top:24px\">De 6 spelregels</h2>"+rulesHTML()+
+ "<p>Gebruik ChatGPT alleen als een volwassene in de buurt is.</p>"+
+ "<button class=\"checkrow\" data-act=\"agree\" id=\"agree\" aria-pressed=\"false\"><span class=\"box\"></span><span>Ik heb de spelregels gelezen en beloof ze te volgen.</span></button>"+
+ "<p class=\"status\" id=\"obst\" role=\"status\"></p><button class=\"primary\" data-act=\"start\">Aan de slag</button></section>";
+}
+function homeView(){
+ var fin=LESSONS.filter(lessonFinished).length;
+ var h="<section class=\"card hero\"><div><h1>Hoi "+esc(S.name||"")+"!</h1><p>Elke les brengt je een stap verder op het pad. Aan het eind heb je je eigen avontuur gemaakt.</p><p><b>"+fin+" van 6 lessen klaar.</b></p><div class=\"row\">";
+ if(allFinished())h+="<a class=\"btn primary\" href=\"#diploma\">Bekijk je diploma</a>";
+ else{var next=LESSONS.filter(function(L){return !lessonFinished(L);})[0];h+="<a class=\"btn primary\" href=\"#les-"+next.id+"\">"+(fin?"Ga verder met les "+next.id:"Start les 1")+"</a>";}
+ h+="<a class=\"btn\" href=\"#speeltuin\">Open de speeltuin</a></div></div><div>"+pathSVG()+"</div></section>";
+ h+="<h2>Alle lessen</h2><ul class=\"lessons\">"+LESSONS.map(function(L){
+  var p=progress(L),f=lessonFinished(L);
+  return "<li><a class=\"lesson"+(f?" finished":"")+"\" href=\"#les-"+L.id+"\"><span class=\"num\">"+L.id+"</span><span><b>"+L.title+"</b><small>"+L.sub+"</small><div class=\"bar\" aria-hidden=\"true\"><span style=\"width:"+pct(L)+"%\"></span></div></span><span class=\"go\">"+(f?"Klaar":p.d+"/"+p.t)+"</span></a></li>";
+ }).join("")+"</ul>";
+ return h;
+}
+function tagFor(t){return {quiz:["denk","Weet je het?"],prompt:["probeer","Probeer"],offline:["samen","Doe het samen"],reflect:["denk","Denk na"],check:["denk","Check"],choose:["denk","Kies"],form:["denk","Schrijf op"],storygoal:["samen","Bouwen"]}[t];}
+function badge(key){return stepDone(key)?"<span class=\"done-badge\">Klaar</span>":"";}
+function chipsHTML(key){
+ var s=STEPS[key].s;if(!s.need||!s.need.length)return "";
+ var auto=detect(draftOf(key));
+ return ["bodem","saus","kaas","toppings"].map(function(l){
+  var on=eff(key,l,auto),needed=s.need.indexOf(l)>=0;
+  return "<button class=\"chip"+(needed?" needed":"")+(on?" on":"")+"\" data-act=\"layer\" data-key=\""+key+"\" data-layer=\""+l+"\" aria-pressed=\""+on+"\">"+(on?"✓ ":"")+LAYERS[l].n+(needed?" (nodig)":"")+"</button>";
+ }).join("");
+}
+function stepHTML(L,s){
+ var key=L.id+"-"+s.id,tg=s.t==="text"?null:tagFor(s.t),h="";
+ if(s.t==="text"){
+  h+="<section class=\"card\"><span class=\"tag ontdek\">Ontdek</span><h2>"+s.h+"</h2>"+(s.p||[]).map(function(p){return "<p>"+p+"</p>";}).join("");
+  if(s.list)h+="<ul>"+s.list.map(function(i){return "<li>"+i+"</li>";}).join("")+"</ul>";
+  if(s.layers)h+=layersHTML(s.layers);
+  if(s.tip)h+="<div class=\"tip\"><b>Tip.</b> "+s.tip+"</div>";
+  return h+"</section>";
+ }
+ h+="<section class=\"card\" id=\"s-"+key+"\"><span class=\"tag "+tg[0]+"\">"+tg[1]+"</span>"+badge(key);
+ if(s.t==="quiz"){
+  h+="<h3>"+s.q+"</h3>"+s.opts.map(function(o,i){
+   var cls="opt"+(stepDone(key)&&i===s.ok?" right":"");
+   return "<button class=\""+cls+"\" data-act=\"quiz\" data-key=\""+key+"\" data-i=\""+i+"\">"+o+"</button>";
+  }).join("")+"<p class=\"fb\" id=\"fb-"+key+"\" role=\"status\">"+(stepDone(key)?"Goed! "+s.why:"")+"</p>";
+ }else if(s.t==="prompt"){
+  h+="<h3>"+s.title+"</h3><p>"+s.task+"</p>"+
+   "<textarea id=\"ta-"+key+"\" data-key=\""+key+"\" rows=\"5\" placeholder=\"Schrijf hier je prompt\" aria-label=\"Jouw prompt\">"+esc(draftOf(key))+"</textarea>"+
+   "<div class=\"chips\" id=\"chips-"+key+"\">"+chipsHTML(key)+"</div>"+
+   (s.need&&s.need.length?"<p class=\"hintline\">De robot zoekt de lagen in je tekst, maar hij kan zich vergissen. Tik op een laag om hem zelf aan of uit te zetten.</p>":"")+
+   "<div class=\"row\"><button data-act=\"copy\" data-key=\""+key+"\">Kopieer prompt</button><a class=\"btn ghost\" href=\"https://chatgpt.com\" target=\"_blank\" rel=\"noopener\">Open ChatGPT</a><button class=\"primary\" data-act=\"savep\" data-key=\""+key+"\">Bewaar in logboek</button></div>"+
+   "<p class=\"status\" id=\"st-"+key+"\" role=\"status\"></p>";
+ }else if(s.t==="offline"){
+  h+="<h3>"+s.title+"</h3><p>"+s.text+"</p><button class=\"checkrow"+(stepDone(key)?" on":"")+"\" data-act=\"off\" data-key=\""+key+"\" aria-pressed=\""+stepDone(key)+"\"><span class=\"box\">"+(stepDone(key)?"✓":"")+"</span><span>Dit hebben we gedaan</span></button>";
+ }else if(s.t==="reflect"){
+  var a=S.ans[key]||{c:null,t:""};
+  h+="<h3>"+s.q+"</h3>"+(s.choices||[]).map(function(c,i){return "<button class=\"opt"+(a.c===i?" sel":"")+"\" data-act=\"rc\" data-key=\""+key+"\" data-i=\""+i+"\" aria-pressed=\""+(a.c===i)+"\">"+c+"</button>";}).join("")+
+   "<p>"+s.ask+"</p><textarea data-rkey=\""+key+"\" rows=\"3\" aria-label=\"Jouw antwoord\">"+esc(a.t||"")+"</textarea>"+
+   "<div class=\"row\"><button class=\"primary\" data-act=\"rsave\" data-key=\""+key+"\">Opslaan</button></div><p class=\"status\" id=\"st-"+key+"\" role=\"status\"></p>";
+ }else if(s.t==="check"){
+  var cs=S.checks[key]||[];
+  h+="<h3>"+s.title+"</h3>"+s.items.map(function(it,i){return "<button class=\"checkrow"+(cs[i]?" on":"")+"\" data-act=\"chk\" data-key=\""+key+"\" data-i=\""+i+"\" aria-pressed=\""+!!cs[i]+"\"><span class=\"box\">"+(cs[i]?"✓":"")+"</span><span>"+it+"</span></button>";}).join("");
+ }else if(s.t==="form"){
+  var fa=S.ans[key];if(!Array.isArray(fa))fa=[];
+  h+="<h3>"+s.title+"</h3><p>"+s.task+"</p>"+s.fields.map(function(f,i){return "<label class=\"flabel\" for=\"f-"+key+"-"+i+"\">"+f.l+"</label><input type=\"text\" id=\"f-"+key+"-"+i+"\" data-fkey=\""+key+"\" data-fi=\""+i+"\" maxlength=\"140\" placeholder=\""+f.ph+"\" value=\""+esc(fa[i]||"")+"\">";}).join("")+
+   "<div class=\"row\"><button class=\"primary\" data-act=\"fsave\" data-key=\""+key+"\">Opslaan</button></div><p class=\"status\" id=\"st-"+key+"\" role=\"status\"></p>";
+ }else if(s.t==="storygoal"){
+  h+="<h3>"+s.title+"</h3><p>"+s.task+"</p><ul class=\"goals\">"+reqs(s).map(function(r){return "<li class=\""+(r.ok?"ok":"")+"\"><span class=\"gm\" aria-hidden=\"true\">"+(r.ok?"✓":"○")+"</span> "+r.label+"</li>";}).join("")+"</ul><div class=\"row\"><a class=\"btn primary\" href=\"#speeltuin\">Open de speeltuin</a></div>";
+ }
+ return h+"</section>";
+}
+function lessonView(n){
+ var L=LESSONS[n-1];if(!L)return homeView();
+ var h="<section class=\"card\"><p style=\"margin:0;color:var(--muted);font-weight:700\">Les "+L.id+" van 6</p><h1>"+L.title+"</h1><p>"+L.sub+"</p><div class=\"bar\" aria-hidden=\"true\"><span style=\"width:"+pct(L)+"%\"></span></div><p class=\"hintline\">"+progress(L).d+" van "+progress(L).t+" opdrachten klaar</p></section>";
+ h+=L.steps.map(function(s){return stepHTML(L,s);}).join("");
+ if(lessonFinished(L))h+="<section class=\"card good\"><h2>Les "+L.id+" is klaar!</h2><p>Je bent weer een stap verder op het pad.</p></section>";
+ h+="<div class=\"lessonnav\">"+(n>1?"<a class=\"btn\" href=\"#les-"+(n-1)+"\">Vorige les</a>":"<span></span>")+
+   (n<6?"<a class=\"btn primary\" href=\"#les-"+(n+1)+"\">Volgende les</a>":"<a class=\"btn primary\" href=\"#start\">Naar de kaart</a>")+"</div>";
+ return h;
+}
+
+/* ---------- speeltuin ---------- */
+var play=null,confirmLoad=false;
+function storyView(){
+ if(play)return playView();
+ var st=S.story;
+ var h="<section class=\"card\"><h1>Speeltuin</h1><p>Bouw hier je eigen avontuur. Elke scène heeft een stukje verhaal en keuzes. Tik op Speel om het meteen uit te proberen. Alles wordt vanzelf bewaard.</p>"+
+  "<label class=\"flabel\" for=\"stt\">Titel van je avontuur</label><input type=\"text\" id=\"stt\" maxlength=\"60\" placeholder=\"Bijvoorbeeld: De geheime grot\" value=\""+esc(st.title)+"\">"+
+  "<p class=\"flabel\" style=\"margin-top:14px\">Thema</p><div class=\"chips\" style=\"margin:0 0 14px\">"+Object.keys(THEMES).map(function(k){var on=st.themeSet&&st.theme===k;return "<button class=\"chip needed"+(on?" on":"")+"\" data-act=\"theme\" data-k=\""+k+"\" aria-pressed=\""+on+"\">"+(on?"✓ ":"")+THEMES[k][0]+"</button>";}).join("")+"</div>"+
+  "<div class=\"row\"><button class=\"primary\" data-act=\"play\">Speel mijn avontuur</button></div></section>";
+ st.scenes.forEach(function(sc,i){
+  h+="<section class=\"card scene\"><h3>Scène "+(i+1)+(i===0?" (begin)":"")+"</h3>"+
+   "<textarea data-sc=\""+i+"\" rows=\"4\" placeholder=\"Wat gebeurt er in deze scène?\" aria-label=\"Tekst van scène "+(i+1)+"\">"+esc(sc.text||"")+"</textarea>";
+  (sc.choices||[]).forEach(function(c,j){
+   h+="<div class=\"chrow\"><input type=\"text\" data-chs=\"1\" data-i=\""+i+"\" data-j=\""+j+"\" maxlength=\"80\" placeholder=\"Keuze, bijvoorbeeld: Ga je de grot in?\" aria-label=\"Keuze "+(j+1)+"\" value=\""+esc(c.t||"")+"\">"+
+    "<select data-cht=\"1\" data-i=\""+i+"\" data-j=\""+j+"\" aria-label=\"Waar leidt keuze "+(j+1)+" naartoe\"><option value=\"-1\""+(c.to<0?" selected":"")+">Einde van het verhaal</option>"+
+    st.scenes.map(function(x,k){return "<option value=\""+k+"\""+(c.to===k?" selected":"")+">Naar scène "+(k+1)+"</option>";}).join("")+"</select>"+
+    "<button class=\"small\" data-act=\"chdel\" data-i=\""+i+"\" data-j=\""+j+"\" aria-label=\"Keuze verwijderen\">Weg</button></div>";
+  });
+  h+="<div class=\"row\">"+((sc.choices||[]).length<3?"<button class=\"small\" data-act=\"chadd\" data-i=\""+i+"\">Keuze toevoegen</button>":"")+(i>0?"<button class=\"small ghost\" data-act=\"scdel\" data-i=\""+i+"\">Scène verwijderen</button>":"")+"</div>";
+  if(!(sc.choices||[]).length)h+="<p class=\"hintline\">Zonder keuzes is dit een eindscène.</p>";
+  h+="</section>";
+ });
+ h+="<div class=\"row\" style=\"margin:0 0 16px\"><button class=\"primary\" data-act=\"scadd\">Nieuwe scène</button></div>";
+ h+="<section class=\"card\"><h2>Delen</h2><p>Stuur je avontuur naar iemand anders: kopieer de tekst en plak hem in een bericht. De ander plakt hem hieronder in zijn eigen speeltuin.</p><button data-act=\"sharecopy\">Kopieer mijn avontuur</button>"+
+  "<label class=\"flabel\" for=\"loadta\" style=\"margin-top:14px\">Plak hier een avontuur</label><textarea id=\"loadta\" rows=\"3\" aria-label=\"Plak hier een avontuur\"></textarea><div class=\"row\"><button data-act=\"load\">Laad dit avontuur</button></div><p class=\"status\" id=\"stshare\" role=\"status\"></p></section>";
+ return h;
+}
+function playView(){
+ var st=S.story,t=THEMES[st.theme]||THEMES.bos;
+ var w="<section class=\"player\" style=\"background:"+t[1]+";color:"+t[2]+"\">"+(st.title.trim()?"<p class=\"ptitle\">"+esc(st.title)+"</p>":"");
+ if(play.end){return w+"<h2>Einde</h2><p class=\"story\">Dit is het einde van dit pad.</p>"+playButtons()+"</section>";}
+ var sc=st.scenes[play.at]||{text:"",choices:[]};
+ var cs=(sc.choices||[]).map(function(c,j){return {c:c,j:j};}).filter(function(x){return (x.c.t||"").trim().length>=2;});
+ w+="<p class=\"story\">"+(sc.text.trim()?esc(sc.text):"Deze scène heeft nog geen tekst.")+"</p>";
+ if(cs.length){
+  w+=cs.map(function(x){return "<button class=\"pc\" data-act=\"pick\" data-j=\""+x.j+"\">"+esc(x.c.t)+"</button>";}).join("");
+  w+="<div class=\"row\">"+(play.h.length?"<button class=\"small pg\" data-act=\"pback\">Stap terug</button>":"")+"<button class=\"small pg\" data-act=\"pstop\">Terug naar bouwen</button></div>";
+ }else{
+  w+="<h2>Einde</h2>"+playButtons();
+ }
+ return w+"</section>";
+}
+function playButtons(){return "<div class=\"row\"><button class=\"pc\" data-act=\"play\">Opnieuw spelen</button>"+(play.h.length||play.end?"<button class=\"small pg\" data-act=\"pback\">Stap terug</button>":"")+"<button class=\"small pg\" data-act=\"pstop\">Terug naar bouwen</button></div>";}
+function sanitize(d){
+ if(!d||typeof d!=="object"||!Array.isArray(d.scenes)||!d.scenes.length||d.scenes.length>30)return null;
+ var n=d.scenes.length;
+ var scenes=d.scenes.map(function(s){
+  var ch=Array.isArray(s&&s.choices)?s.choices.slice(0,3).map(function(c){var to=(c&&typeof c.to==="number"&&isFinite(c.to))?Math.floor(c.to):-1;if(to<-1||to>=n)to=-1;return {t:String((c&&c.t)||"").slice(0,80),to:to};}):[];
+  return {text:String((s&&s.text)||"").slice(0,1500),choices:ch};
+ });
+ return {title:String(d.title||"").slice(0,60),theme:THEMES[d.theme]?d.theme:"bos",themeSet:true,scenes:scenes};
+}
+
+/* ---------- other views ---------- */
+function logView(){
+ var h="<section class=\"card\"><h1>Mijn logboek</h1><p>Hier staan al je bewaarde prompts. Kijk wat het best werkte en gebruik het weer.</p></section>";
+ if(!S.log.length)return h+"<section class=\"card\"><p>Je hebt nog geen prompts bewaard. Maak een prompt in een les en tik op Bewaar in logboek.</p></section>";
+ var list=S.log.slice().sort(function(a,b){return a.d<b.d?1:-1;});
+ return h+"<section class=\"card\">"+list.map(function(e){
+  return "<div class=\"log\"><b>Les "+e.lesson+": "+esc(e.title)+"</b><pre>"+esc(e.text)+"</pre><button class=\"small\" data-act=\"copylog\" data-key=\""+esc(e.key)+"\">Kopieer</button></div>";
+ }).join("")+"<p class=\"status\" id=\"logst\" role=\"status\"></p></section>";
+}
+function rulesView(){return "<section class=\"card\"><h1>De 6 spelregels</h1>"+rulesHTML()+"<p>Gebruik ChatGPT alleen als een volwassene in de buurt is.</p></section>";}
+function parentsView(){
+ return "<section class=\"card\"><h1>Voor ouders</h1>"+
+ "<h3>Zo werkt het</h3><p>Het Avonturenboek is het vervolg op het AI-avontuur. In 6 lessen van 45 tot 60 minuten bedenken de kinderen een eigen avontuur waarin de lezer kiest, schrijven ze het met hulp van ChatGPT en testen ze het met de familie. In de speeltuin bouwen en spelen ze hun verhaal meteen op de iPad.</p>"+
+ "<h3>De pizza-robot</h3><p>Onder elke prompt zoekt een eenvoudig programma naar de lagen van de Prompt-Pizza. Het kijkt alleen naar bepaalde woorden en kan zich vergissen. Het kind kan elke laag zelf aan of uit zetten.</p>"+
+ "<h3>Delen</h3><p>In de speeltuin kunnen de kinderen hun avontuur als tekst kopiëren en aan iemand sturen. De ander plakt het in zijn eigen speeltuin. Zo kunnen broer en zus elkaars avontuur spelen.</p>"+
+ "<h3>ChatGPT en leeftijd</h3><p>ChatGPT stelt in de voorwaarden een minimumleeftijd. Lees de actuele voorwaarden van OpenAI, kijk in de instellingen van de app naar opties voor ouderlijk toezicht en naar de instelling voor het gebruik van gesprekken om het model te verbeteren, en zit er de eerste weken bij. Hoe jullie hiermee omgaan is jouw keuze.</p>"+
+ "<h3>Voortgang</h3><p>Voortgang, logboek en avontuur staan alleen op dit apparaat, in deze browser. Wis je de browsergegevens, dan zijn ze weg. Kopieer een avontuur dus gerust als reservekopie.</p>"+
+ "<div id=\"resetbox\"><button data-act=\"reset1\">Alles wissen</button></div></section>";
+}
+function diplomaView(){
+ if(!allFinished())return "<section class=\"card\"><h2>Nog niet klaar</h2><p>Maak eerst alle 6 lessen af.</p><a class=\"btn primary\" href=\"#start\">Naar de kaart</a></section>";
+ var d=new Date().toLocaleDateString("nl-NL",{day:"numeric",month:"long",year:"numeric"});
+ return "<section class=\"diploma\"><p style=\"font-weight:700;color:var(--muted)\">Dit diploma is voor</p><h1>"+esc(S.name)+"</h1><h2>Avonturen-Maker</h2>"+
+ "<p>Je hebt een eigen avontuur bedacht met een held, een plek, een probleem en een doel. Je hebt scènes en keuzes gebouwd, met ChatGPT geschreven, getest en verbeterd.</p>"+
+ "<p><b>"+esc(S.story.title||"")+"</b></p><p><b>"+d+"</b></p><p style=\"color:var(--muted)\">Maak een schermafbeelding om dit diploma te bewaren.</p></section>"+
+ "<div class=\"row\" style=\"justify-content:center\"><a class=\"btn\" href=\"#speeltuin\">Speel je avontuur</a><a class=\"btn\" href=\"#start\">Naar de kaart</a></div>";
+}
+
+/* ---------- render ---------- */
+var lastRoute=null;
+function route(){return (location.hash||"").replace("#","")||"start";}
+function render(keep){
+ var r=route(),app=$("app"),y=window.scrollY;
+ if(!S.rules&&r!=="ouders"&&r!=="spelregels"){app.innerHTML=onboarding();lastRoute=r;return;}
+ var m=/^les-(\d+)$/.exec(r);
+ if(r!=="speeltuin")play=null;
+ if(m)app.innerHTML=lessonView(parseInt(m[1],10));
+ else if(r==="speeltuin")app.innerHTML=storyView();
+ else if(r==="logboek")app.innerHTML=logView();
+ else if(r==="spelregels")app.innerHTML=rulesView();
+ else if(r==="ouders")app.innerHTML=parentsView();
+ else if(r==="diploma")app.innerHTML=diplomaView();
+ else app.innerHTML=homeView();
+ if(keep||lastRoute===r)window.scrollTo(0,y);else window.scrollTo(0,0);
+ lastRoute=r;
+}
+window.addEventListener("hashchange",function(){render(false);});
+
+/* ---------- actions ---------- */
+function say(id,msg){var e=$(id);if(e)e.textContent=msg;}
+function updateChips(key){var c=$("chips-"+key);if(c)c.innerHTML=chipsHTML(key);}
+document.addEventListener("input",function(e){
+ var t=e.target;if(!t.matches)return;
+ if(t.matches("textarea[data-key]")){var key=t.getAttribute("data-key");S.drafts[key]=t.value;save();updateChips(key);}
+ else if(t.matches("textarea[data-rkey]")){var k=t.getAttribute("data-rkey");var a=S.ans[k]||{c:null,t:""};a.t=t.value;S.ans[k]=a;save();}
+ else if(t.matches("input[data-fkey]")){var fk=t.getAttribute("data-fkey"),fi=parseInt(t.getAttribute("data-fi"),10);var arr=Array.isArray(S.ans[fk])?S.ans[fk]:[];arr[fi]=t.value;S.ans[fk]=arr;save();}
+ else if(t.id==="stt"){S.story.title=t.value;save();}
+ else if(t.matches("textarea[data-sc]")){S.story.scenes[parseInt(t.getAttribute("data-sc"),10)].text=t.value;save();}
+ else if(t.matches("input[data-chs]")){var i=parseInt(t.getAttribute("data-i"),10),j=parseInt(t.getAttribute("data-j"),10);S.story.scenes[i].choices[j].t=t.value;save();}
+});
+document.addEventListener("change",function(e){
+ var t=e.target;if(t.matches&&t.matches("select[data-cht]")){var i=parseInt(t.getAttribute("data-i"),10),j=parseInt(t.getAttribute("data-j"),10);S.story.scenes[i].choices[j].to=parseInt(t.value,10);save();}
+});
+function copyFrom(text,ta,stId,okMsg){
+ var done=function(){say(stId,okMsg||"Gekopieerd! Plak hem nu in ChatGPT.");};
+ var fail=function(){if(ta){ta.focus();ta.setSelectionRange(0,99999);}say(stId,"Tik op de geselecteerde tekst en kies Kopieer.");};
+ try{if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(text).then(done,fail);}else{fail();}}catch(err){fail();}
+}
+function removeScene(i){
+ var sc=S.story.scenes;sc.splice(i,1);
+ sc.forEach(function(s){(s.choices||[]).forEach(function(c){if(c.to===i)c.to=-1;else if(c.to>i)c.to=c.to-1;});});
+}
+document.addEventListener("click",function(e){
+ var b=e.target.closest?e.target.closest("[data-act]"):null;if(!b)return;
+ var act=b.getAttribute("data-act"),key=b.getAttribute("data-key"),i=parseInt(b.getAttribute("data-i"),10),j=parseInt(b.getAttribute("data-j"),10);
+ if(act==="agree"){var on=b.classList.toggle("on");b.setAttribute("aria-pressed",on);b.querySelector(".box").textContent=on?"✓":"";return;}
+ if(act==="start"){
+  var nm=($("nm").value||"").trim();var ag=$("agree").classList.contains("on");
+  if(!nm){say("obst","Vul eerst je naam in.");return;}
+  if(!ag){say("obst","Tik eerst op het vakje om te beloven dat je de spelregels volgt.");return;}
+  S.name=nm;S.rules=true;save();if(route()!=="start")location.hash="#start";render(false);return;
+ }
+ if(act==="quiz"){
+  var s=STEPS[key].s;var fb=$("fb-"+key);
+  if(i===s.ok){S.done[key]=true;save();render(true);}
+  else{b.classList.add("wrong");if(fb)fb.textContent="Nog niet. Probeer een ander antwoord.";}
+  return;
+ }
+ if(act==="layer"){
+  var l=b.getAttribute("data-layer");var auto=detect(draftOf(key));var cur=eff(key,l,auto);
+  S.manual[key]=S.manual[key]||{};S.manual[key][l]=!cur;save();updateChips(key);return;
+ }
+ if(act==="copy"){var ta=$("ta-"+key);copyFrom(ta.value,ta,"st-"+key);return;}
+ if(act==="savep"){
+  var e2=STEPS[key],s2=e2.s,ta2=$("ta-"+key),text=ta2.value.trim(),au=detect(text);
+  if(text.length<(s2.min||10)){say("st-"+key,"Schrijf nog wat meer. Een goede prompt is meestal een of twee zinnen.");return;}
+  if(s2.forbid&&s2.forbid.some(function(f){return text.indexOf(f)>=0;})){say("st-"+key,s2.forbidMsg);return;}
+  var miss=(s2.need||[]).filter(function(l2){return !eff(key,l2,au);});
+  if(miss.length){say("st-"+key,"Nog niet klaar. Er mist nog: "+miss.map(function(l3){return LAYERS[l3].n.toLowerCase()+". "+LAYERS[l3].hint;}).join(" "));return;}
+  S.drafts[key]=text;S.done[key]=true;
+  var entry={key:key,lesson:e2.L.id,title:s2.title,text:text,d:new Date().toISOString()};
+  var found=false;S.log=S.log.map(function(x){if(x.key===key){found=true;return entry;}return x;});if(!found)S.log.push(entry);
+  save();render(true);return;
+ }
+ if(act==="off"){if(S.done[key])delete S.done[key];else S.done[key]=true;save();render(true);return;}
+ if(act==="rc"){var a=S.ans[key]||{c:null,t:""};a.c=i;S.ans[key]=a;save();render(true);return;}
+ if(act==="rsave"){
+  var s3=STEPS[key].s,a3=S.ans[key]||{c:null,t:""},ta3=document.querySelector("textarea[data-rkey=\""+key+"\"]");if(ta3)a3.t=ta3.value;
+  if(s3.choices&&s3.choices.length){if(a3.c===null){say("st-"+key,"Kies eerst een antwoord.");return;}}
+  else if((a3.t||"").trim().length<5){say("st-"+key,"Schrijf nog wat meer op.");return;}
+  S.ans[key]=a3;S.done[key]=true;save();render(true);return;
+ }
+ if(act==="fsave"){
+  var fs=STEPS[key].s,fa=Array.isArray(S.ans[key])?S.ans[key]:[];
+  for(var q=0;q<fs.fields.length;q++){if((fa[q]||"").trim().length<3){say("st-"+key,"Vul bij "+fs.fields[q].l+" nog iets in.");return;}}
+  S.done[key]=true;save();render(true);return;
+ }
+ if(act==="chk"){
+  var arr=S.checks[key]||[];arr[i]=!arr[i];S.checks[key]=arr;
+  var n=STEPS[key].s.items.length,all=true;for(var z=0;z<n;z++){if(!arr[z])all=false;}
+  if(all)S.done[key]=true;else delete S.done[key];save();render(true);return;
+ }
+ if(act==="copylog"){var ent=S.log.filter(function(x){return x.key===key;})[0];if(ent)copyFrom(ent.text,null,"logst");return;}
+ /* speeltuin */
+ if(act==="theme"){S.story.theme=b.getAttribute("data-k");S.story.themeSet=true;save();render(true);return;}
+ if(act==="scadd"){S.story.scenes.push({text:"",choices:[]});save();render(true);return;}
+ if(act==="scdel"){
+  if(!b.getAttribute("data-sure")){b.setAttribute("data-sure","1");b.textContent="Zeker? Tik nog eens";return;}
+  removeScene(i);save();render(true);return;
+ }
+ if(act==="chadd"){S.story.scenes[i].choices.push({t:"",to:-1});save();render(true);return;}
+ if(act==="chdel"){S.story.scenes[i].choices.splice(j,1);save();render(true);return;}
+ if(act==="play"){play={at:0,h:[],end:false};render(false);return;}
+ if(act==="pstop"){play=null;render(false);return;}
+ if(act==="pick"){
+  var c=S.story.scenes[play.at].choices[j];
+  if(!c||c.to<0||c.to>=S.story.scenes.length){play.h.push(play.at);play.end=true;}
+  else{play.h.push(play.at);play.at=c.to;}
+  render(false);return;
+ }
+ if(act==="pback"){if(play.end){play.end=false;play.at=play.h.pop();}else if(play.h.length){play.at=play.h.pop();}render(false);return;}
+ if(act==="sharecopy"){copyFrom(JSON.stringify({v:1,title:S.story.title,theme:S.story.theme,scenes:S.story.scenes}),null,"stshare","Gekopieerd! Plak het in een bericht.");return;}
+ if(act==="load"){
+  var raw=($("loadta").value||"").trim(),data;
+  try{data=JSON.parse(raw);}catch(er){say("stshare","Dit lijkt geen avontuur. Kopieer de hele tekst opnieuw.");return;}
+  var clean=sanitize(data);if(!clean){say("stshare","Dit lijkt geen avontuur. Kopieer de hele tekst opnieuw.");return;}
+  if(!confirmLoad){confirmLoad=true;say("stshare","Je eigen avontuur wordt vervangen. Tik nog een keer op Laad als je dat wilt.");return;}
+  confirmLoad=false;S.story=clean;save();render(true);return;
+ }
+ if(act==="reset1"){$("resetbox").innerHTML="<p><b>Weet je zeker dat je alles wilt wissen?</b> Dit kan niet ongedaan worden gemaakt.</p><button class=\"primary\" data-act=\"reset2\">Ja, alles wissen</button> <button data-act=\"reset0\">Nee, terug</button>";return;}
+ if(act==="reset0"){$("resetbox").innerHTML="<button data-act=\"reset1\">Alles wissen</button>";return;}
+ if(act==="reset2"){S=defaults();save();location.hash="#start";render(false);return;}
+});
+render(false);
+})();
+
+</script>
+</body>
+</html>
